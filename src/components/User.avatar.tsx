@@ -30,7 +30,7 @@ export default function UserAvatar() {
 									className="w-8 h-8 rounded-full border"
 								/>
 							) : (
-								<div className="w-8 h-8 rounded-full bg-indigo-200 flex items-center justify-center text-indigo-700 font-bold">
+								<div className="w-8 h-8 rounded-full bg-indigo-200 flex items-center justify-center text-indigo-700 font-bold ">
 									{auth.currentUser.displayName
 										? auth.currentUser.displayName[0].toUpperCase()
 										: auth.currentUser.email
@@ -40,7 +40,7 @@ export default function UserAvatar() {
 							)}
 
 							{/* Nama hanya muncul di desktop */}
-							<span className="hidden sm:inline text-sm font-medium text-gray-700">
+							<span className="hidden sm:inline text-sm font-medium text-gray-700 " >
 								{auth.currentUser.displayName || auth.currentUser.email}
 							</span>
 						</button>
@@ -49,21 +49,45 @@ export default function UserAvatar() {
 						{showPopup && (
 							<>
 								{/* Klik di luar untuk tutup */}
-								<div className="fixed inset-0 z-40" onClick={handleClose}></div>
+								<div
+									className="fixed inset-0 z-40 
 
-								<div className="absolute mt-2 left-0 bg-white shadow-lg rounded-lg border p-4 z-50 w-52 text-sm">
-									<div className="font-semibold text-gray-800">
+
+
+
+"
+									onClick={handleClose}
+								></div>
+
+								<div className="absolute  mt-2 left-0 bg-gray-50 shadow-lg rounded-lg border border-gray-300 p-4 pb-5 z-50 w-52 text-sm">
+									<div className="font-semibold text-gray-800 ">
 										{auth.currentUser.displayName || "User"}
 									</div>
-									<div className="text-gray-500 break-all text-xs">
+									<div className="text-gray-500 break-all text-sm">
 										{auth.currentUser.email}
 									</div>
-									<button
-										onClick={handleSignOut}
-										className="mt-3 text-red-600 hover:underline text-xs"
-									>
-										Sign Out
-									</button>
+									<div className="flex justify-start mt-4">
+										<button
+											onClick={handleSignOut}
+											className="flex items-center gap-2 text-white bg-gray-800 hover:bg-red-600 px-3 py-2 rounded-full text-xs sm:text-sm font-medium transition shadow-md hover:shadow-lg"
+										>
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												className="w-4 h-4 sm:w-5 sm:h-5"
+												fill="none"
+												viewBox="0 0 24 24"
+												stroke="currentColor"
+												strokeWidth={2}
+											>
+												<path
+													strokeLinecap="round"
+													strokeLinejoin="round"
+													d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h6a2 2 0 012 2v1"
+												/>
+											</svg>
+											<span>Sign Out</span>
+										</button>
+									</div>
 								</div>
 							</>
 						)}

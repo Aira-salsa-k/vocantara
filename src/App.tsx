@@ -25,7 +25,7 @@ const AppLayout = () => {
 			{!hideHeaderRoutes.includes(location.pathname) && (
 				<Header onSignOut={handleSignOut} />
 			)}
-			<main className="flex-1 p-4">
+			<main className="font-sans flex-1 px-0 lg:px-4">
 				<Routes>
 					<Route path="/login" element={<Login />} />
 					<Route

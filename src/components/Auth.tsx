@@ -1,9 +1,9 @@
 // import React, { useState } from 'react';
 // import { auth } from '../firebase';
-// import { 
-//   createUserWithEmailAndPassword, 
+// import {
+//   createUserWithEmailAndPassword,
 //   signInWithEmailAndPassword,
-//   signOut 
+//   signOut
 // } from 'firebase/auth';
 
 // const Auth = () => {
@@ -113,21 +113,27 @@ export const AuthForm = () => {
 	};
 
 	return (
-		<div className=" w-full mx-auto bg-gray-50 flex flex-col justify-center items-center p-4 sm:p-4 lg:p-8  xl:p-8 rounded-xl">
-			<div className="w-full mx-auto overflow-hidden bg-white rounded-xl shadow-md  flex flex-col md:flex-row">
-				{/* Gambar Robot - di atas pada mobile, di kiri pada tablet/desktop */}
-				<div className="w-full md:w-1/2 bg-indigo-50 flex items-center justify-center p-8 order-1 md:order-none">
+		<div className="w-full max-w-6xl mx-auto p-4 sm:p-6 lg:p-8">
+			<div className="flex flex-col lg:flex-row bg-white shadow-xl border border-gray-200 rounded-xl overflow-hidden items-stretch lg:items-center">
+				{/* Gambar */}
+				<div className="lg:flex-1 flex items-center justify-center md:mt-10 lg:mt-0 sm:p-0 md:p-2 lg:pl-10">
 					<img
-						src="../assets/robot_modif.svg" // Ganti dengan path gambar robot Anda
-						alt="Robot Illustratiod"
-						className="w-full max-w-xs h-auto object-contain"
+						src="/b-vocantara.jpg"
+						alt="Robot Illustration"
+						className="
+          w-full
+          max-w-[100%] sm:max-w-[100%] md:max-w-[90%] lg:max-w-[100%]
+          h-auto lg:h-full
+          object-cover
+          rounded-xl
+        "
 					/>
 				</div>
 
 				{/* Form Login */}
-				<div className="w-full md:w-1/2 p-8 order-2">
-					<h2 className="text-center text-2xl font-bold text-gray-900 mb-8">
-						{isLogin ? "Sign in to your account" : "Create new account"}
+				<div className="lg:flex-1 p-6 md:p-8 flex flex-col justify-center">
+					<h2 className="text-center text-2xl font-bold text-indigo-900 mb-8">
+						{isLogin ? "Sign in to your account" : "Buat akun baru"}
 					</h2>
 
 					<form className="space-y-6" onSubmit={handleSubmit}>
@@ -156,9 +162,9 @@ export const AuthForm = () => {
 
 						<button
 							type="submit"
-							className="w-full py-3 px-4 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition duration-200"
+							className="w-full py-3 px-4 bg-indigo-900 hover:bg-indigo-700 text-white font-medium rounded-lg transition duration-200"
 						>
-							{isLogin ? "Sign in" : "Sign up"}
+							{isLogin ? "Login" : "Buat Akun"}
 						</button>
 					</form>
 
@@ -168,8 +174,8 @@ export const AuthForm = () => {
 							onClick={() => setIsLogin(!isLogin)}
 						>
 							{isLogin
-								? "Don't have an account? Sign up"
-								: "Already have an account? Sign in"}
+								? "Gak punya akun? daftar"
+								: "Sudah Punya akun? Login"}
 						</button>
 					</div>
 				</div>

@@ -1,4 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
 @import "tailwindcss";
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
+
+:root {
+  --font-sans: 'Onest', ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+/* modul alert effect */
+/* 🌟 Ukuran popup lebih lebar di mobile */
+.swal-wide {
+  width: 90% !important;
+  max-width: 400px !important;
+  border-radius: 16px !important;
+  padding: 20px !important;
+}
+
+
+/* ✅ Pertebal garis centangnya */
+.swal-wide .swal2-icon.swal2-success .swal2-success-line-tip,
+.swal-wide .swal2-icon.swal2-success .swal2-success-line-long {
+  border-width: 3px !important; /* default 2px */
+ /* indigo-600 Tailwind */
+}
+
+/* 🔵 Pertebal lingkaran success-nya */
+.swal-wide .swal2-icon.swal2-success .swal2-success-ring {
+  border: 8px solid #615af0 !important;
+}
+/* 🌐 Di layar besar tetap elegan */
+@media (min-width: 768px) {
+  .swal-wide {
+    width: 450px !important;
+  }
+}
+@media (max-width: 480px) {
+  .swal-wide .swal2-title {
+    font-size: 1rem !important;
+  }
+  .swal-wide .swal2-html-container {
+    font-size: 1rem !important;
+  }
+.swal-wide .swal2-icon {
+    transform: scale(0.75); /* perkecil 75% dari ukuran default */
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+/* sparkle effect */
+/* ✨ Efek shine */
+.shine {
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.45) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+}
+
+button:hover .shine {
+  animation: shine-move 0.8s ease-in-out forwards;
+}
+
+.shine-loop {
+  animation: shine-loop 1.7s ease-in-out linear infinite;
+}
+
+@keyframes shine-move {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+
+@keyframes shine-loop {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+
+/* 🌟 Efek ikon saat hover */
+button:hover .sparkle-icon {
+  transform: rotate(15deg) scale(1.3);
+  filter: drop-shadow(0 0 10px rgba(167, 139, 250, 0.527));
+  animation: sparkle-pulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes sparkle-pulse {
+  0% {
+    filter: drop-shadow(0 0 6px rgba(199, 210, 254, 0.6));
+  }
+  100% {
+    filter: drop-shadow(0 0 14px rgba(199, 210, 254, 1));
+  }
+}
+
+/* 🪄 Transisi lembut */
+button {
+  transition: background-color 0.6s ease, color 0.6s ease, box-shadow 0.6s ease;
+}
+
+
+
+/* ✨ Animasi goyang + membesar + glow */
+@keyframes wiggle-glow {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+    filter: drop-shadow(0 0 0 rgba(239, 68, 68, 0));
+  }
+  25% {
+    transform: rotate(-24deg) scale(1);
+    filter: drop-shadow(0 0 8px rgba(239, 68, 68, 0.8));
+  }
+  75% {
+    transform: rotate(24deg) scale(1);
+    filter: drop-shadow(0 0 12px rgba(239, 68, 68, 1));
+  }
+
+}
+
+/* Jalan di hover (desktop) dan tap (mobile) */
+.group:hover .trash-icon,
+.group:active .trash-icon {
+  animation: wiggle-glow 0.4s ease-in-out;
+}
+
