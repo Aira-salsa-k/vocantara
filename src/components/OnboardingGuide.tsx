@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { X, ArrowRight, ArrowLeft } from "lucide-react";
 
 // Definisikan tipe untuk setiap langkah
@@ -49,6 +49,24 @@ interface OnboardingGuideProps {
 
 const OnboardingGuide: React.FC<OnboardingGuideProps> = ({ onFinish }) => {
   const [currentStep, setCurrentStep] = useState(0);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+
+  // Gunakan useEffect untuk handle play/pause secara manual
+  // karena atribut autoPlay dinamis tidak selalu memicu play()
+  useEffect(() => {
+    videoRefs.current.forEach((video, index) => {
+      if (video) {
+        if (index === currentStep) {
+          // Play video aktif dari awal
+          video.currentTime = 0;
+          video.play().catch((err) => console.log("Autoplay prevented:", err));
+        } else {
+          // Pause sisanya untuk performa
+          video.pause();
+        }
+      }
+    });
+  }, [currentStep]);
 
   const handleNext = () => {
     if (currentStep < steps.length - 1) {
@@ -94,27 +112,44 @@ const OnboardingGuide: React.FC<OnboardingGuideProps> = ({ onFinish }) => {
           ))}
         </div>
 
-        {/* Media (Gambar/GIF/Video) */}
-        <div className="mb-6 rounded-xl overflow-hidden bg-gray-50 flex items-center justify-center min-h-[200px] shadow-inner">
-          {currentStepData.imageUrl ? (
-            currentStepData.imageUrl.toLowerCase().endsWith(".mov") ||
-            currentStepData.imageUrl.toLowerCase().endsWith(".mp4") ? (
-              <video
-                src={currentStepData.imageUrl}
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-auto object-cover max-h-[250px]"
-              />
-            ) : (
-              <img
-                src={currentStepData.imageUrl}
-                alt={currentStepData.title}
-                className="w-full h-auto object-cover max-h-[250px]"
-              />
-            )
-          ) : (
+        {/* Media (Gambar/GIF/Video) - Diubah menjadi persistent rendering agar smooth dan instan */}
+        <div className="mb-6 rounded-xl overflow-hidden bg-gray-50 flex items-center justify-center min-h-[200px] shadow-inner relative">
+          {steps.map((step, index) => {
+            if (!step.imageUrl) return null;
+
+            const isActive = index === currentStep;
+            const isVideo =
+              step.imageUrl.toLowerCase().endsWith(".mov") ||
+              step.imageUrl.toLowerCase().endsWith(".mp4");
+
+            return (
+              <div
+                key={index}
+                className={`${isActive ? "block opacity-100" : "hidden opacity-0"} w-full transition-opacity duration-300`}
+              >
+                {isVideo ? (
+                  <video
+                    ref={(el) => {
+                      videoRefs.current[index] = el;
+                    }}
+                    src={step.imageUrl}
+                    loop
+                    muted
+                    playsInline
+                    preload="auto"
+                    className="w-full h-auto object-cover max-h-[250px]"
+                  />
+                ) : (
+                  <img
+                    src={step.imageUrl}
+                    alt={step.title}
+                    className="w-full h-auto object-cover max-h-[250px]"
+                  />
+                )}
+              </div>
+            );
+          })}
+          {!steps[currentStep]?.imageUrl && (
             <div className="text-gray-400 flex items-center justify-center">
               No Media
             </div>

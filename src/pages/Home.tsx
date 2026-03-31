@@ -863,8 +863,8 @@ export const Home = () => {
                   <span className="animate-pulse text-2xl">🤖</span>
                 </p>
                 <p className="text-sm text-gray-500">
-                  Please wait ( maaf mungkin agak lama/harus coba beberapa kali
-                  karena saat ini sistem masih memakai free resource )
+                  Please wait ( maaf mungkin agak sedikit lama/harus coba beberapa kali
+                  karena saat ini sistem masih memakai free resource :] )
                   <span className="animate-pulse">...</span>
                 </p>
               </div>
