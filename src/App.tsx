@@ -1,52 +1,46 @@
 import React from "react";
 import {
-	BrowserRouter as Router,
-	Routes,
-	Route,
-	useLocation,
-	Navigate,
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+  Navigate,
 } from "react-router-dom";
 import Header from "./components/Header";
 import { Home } from "./pages/Home";
 import { Login } from "./pages/Login";
-import { ProtectedRoute } from "./components/ProtectedRoute";
+import { ForgotPassword } from "./pages/ForgotPassword";
 
 const AppLayout = () => {
-	const location = useLocation();
-	const hideHeaderRoutes = ["/login", "/register"];
+  const location = useLocation();
+  const hideHeaderRoutes = ["/login", "/register", "/forgot-password"];
 
-	const handleSignOut = () => {
-		localStorage.removeItem("token");
-		window.location.href = "/login";
-	};
+  const handleSignOut = () => {
+    localStorage.removeItem("token");
+    window.location.href = "/login";
+  };
 
-	return (
-		<div className="min-h-screen w-full flex flex-col">
-			{!hideHeaderRoutes.includes(location.pathname) && (
-				<Header onSignOut={handleSignOut} />
-			)}
-			<main className="font-sans flex-1 px-0 lg:px-4">
-				<Routes>
-					<Route path="/login" element={<Login />} />
-					<Route
-						path="/"
-						element={
-							<ProtectedRoute>
-								<Home />
-							</ProtectedRoute>
-						}
-					/>
-					<Route path="*" element={<Navigate to="/" />} />
-				</Routes>
-			</main>
-		</div>
-	);
+  return (
+    <div className="min-h-screen w-full flex flex-col">
+      {!hideHeaderRoutes.includes(location.pathname) && (
+        <Header onSignOut={handleSignOut} />
+      )}
+      <main className="font-sans flex-1 px-0 lg:px-4">
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </main>
+    </div>
+  );
 };
 
 export default function App() {
-	return (
-		<Router>
-			<AppLayout />
-		</Router>
-	);
+  return (
+    <Router>
+      <AppLayout />
+    </Router>
+  );
 }

@@ -1,0 +1,1595 @@
+{
+  "profanity_filter": [
+    {
+      "word": "fuck",
+      "category": "profanity",
+      "severity": "high",
+      "replacement": "mess up / ruin",
+      "note": "Kata makian paling umum dan sangat kasar."
+    },
+    {
+      "word": "shit",
+      "category": "profanity",
+      "severity": "high",
+      "replacement": "feces / nonsense",
+      "note": "Kasar, merujuk pada kotoran atau sesuatu yang buruk."
+    },
+    {
+      "word": "bitch",
+      "category": "derogatory",
+      "severity": "high",
+      "replacement": "female dog / mean person",
+      "note": "Sangat kasar jika ditujukan pada wanita, makna aslinya anjing betina."
+    },
+    {
+      "word": "asshole",
+      "category": "insult",
+      "severity": "high",
+      "replacement": "jerk",
+      "note": "Hinaan kasar untuk seseorang yang menyebalkan."
+    },
+    {
+      "word": "dick",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "jerk / detective",
+      "note": "Slang kasar untuk alat kelamin pria atau hinaan."
+    },
+    {
+      "word": "pussy",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "coward / cat",
+      "note": "Slang kasar untuk alat kelamin wanita atau pengecut. Makna asli: kucing."
+    },
+    {
+      "word": "cunt",
+      "category": "profanity",
+      "severity": "high",
+      "replacement": "none",
+      "note": "Salah satu makian paling kasar dalam bahasa Inggris (terutama di US)."
+    },
+    {
+      "word": "cock",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "rooster",
+      "note": "Slang alat kelamin pria. Makna asli: ayam jantan."
+    },
+    {
+      "word": "slut",
+      "category": "derogatory",
+      "severity": "high",
+      "replacement": "promiscuous",
+      "note": "Hinaan yang merendahkan terkait aktivitas seksual."
+    },
+    {
+      "word": "whore",
+      "category": "derogatory",
+      "severity": "high",
+      "replacement": "prostitute",
+      "note": "Sangat kasar, merujuk pada pekerja seks."
+    },
+    {
+      "word": "wanker",
+      "category": "insult",
+      "severity": "high",
+      "replacement": "idiot",
+      "note": "Hinaan kasar yang sangat umum di Inggris (British slang)."
+    },
+    {
+      "word": "prick",
+      "category": "insult",
+      "severity": "medium",
+      "replacement": "jerk / puncture",
+      "note": "Hinaan (berarti orang menyebalkan) atau tindakan menusuk kecil."
+    },
+    {
+      "word": "douche",
+      "category": "insult",
+      "severity": "medium",
+      "replacement": "jerk",
+      "note": "Hinaan (douchebag) untuk orang yang arogan."
+    },
+    {
+      "word": "ass",
+      "category": "vulgar",
+      "severity": "medium",
+      "replacement": "donkey / bottom",
+      "note": "Kasar ringan untuk bokong, atau hewan keledai."
+    },
+    {
+      "word": "damn",
+      "category": "expletive",
+      "severity": "low",
+      "replacement": "condemn",
+      "note": "Makian ringan, sering dianggap tidak pantas di lingkungan sangat formal."
+    },
+    {
+      "word": "hell",
+      "category": "expletive",
+      "severity": "low",
+      "replacement": "underworld",
+      "note": "Digunakan sebagai makian penekanan (What the hell), kurang sopan."
+    },
+    {
+      "word": "cum",
+      "category": "sexual",
+      "severity": "high",
+      "replacement": "semen / climax",
+      "note": "Slang eksplisit untuk cairan sperma atau orgasme."
+    },
+    {
+      "word": "blowjob",
+      "category": "sexual",
+      "severity": "high",
+      "replacement": "none",
+      "note": "Istilah eksplisit untuk aktivitas seksual."
+    },
+    {
+      "word": "hooker",
+      "category": "slang",
+      "severity": "medium",
+      "replacement": "prostitute",
+      "note": "Slang untuk pekerja seks."
+    },
+    {
+      "word": "weed",
+      "category": "slang",
+      "severity": "medium",
+      "replacement": "marijuana / wild plant",
+      "note": "Tanaman liar, tapi sangat umum merujuk pada ganja."
+    },
+    {
+      "word": "rubber",
+      "category": "double_meaning",
+      "severity": "low",
+      "replacement": "eraser / condom",
+      "note": "Di US berarti kondom, di UK berarti penghapus karet. Perlu kehati-hatian."
+    },
+    {
+      "word": "knob",
+      "category": "double_meaning",
+      "severity": "medium",
+      "replacement": "handle",
+      "note": "Gagang pintu, tapi di Inggris menjadi slang untuk alat kelamin pria."
+    },
+    {
+      "word": "bang",
+      "category": "double_meaning",
+      "severity": "low",
+      "replacement": "hit / explosion",
+      "note": "Suara ledakan, tapi sering jadi slang vulgar untuk berhubungan seks."
+    },
+
+    {
+      "word": "rogered",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "defeated / exhausted",
+      "note": "Slang British untuk hubungan seksual; sangat kasar."
+    },
+    {
+      "word": "shag",
+      "category": "slang",
+      "severity": "high",
+      "replacement": "dance / tired",
+      "note": "Umum di UK, bermakna vulgar."
+    },
+    {
+      "word": "horny",
+      "category": "sexual",
+      "severity": "medium",
+      "replacement": "aroused / excited",
+      "note": "Konteks seksual, tidak pantas untuk edukasi umum."
+    },
+    {
+      "word": "nuts",
+      "category": "informal",
+      "severity": "low",
+      "replacement": "crazy",
+      "note": "Bisa berarti kacang, gila, atau bagian tubuh pria."
+    },
+    {
+      "word": "pissed",
+      "category": "slary",
+      "severity": "medium",
+      "replacement": "angry / drunk",
+      "note": "Marah (US) atau sangat mabuk (UK). Kurang sopan."
+    },
+    {
+      "word": "bastard",
+      "category": "insult",
+      "severity": "high",
+      "replacement": "jerk",
+      "note": "Hinaan kasar."
+    },
+    {
+      "word": "bloody",
+      "category": "expletive",
+      "severity": "low",
+      "replacement": "very",
+      "note": "Sangat umum di UK, tapi dianggap kurang sopan oleh orang tua."
+    },
+    {
+      "word": "bollocks",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "nonsense",
+      "note": "Kasar, merujuk pada anatomi pria atau kebohongan."
+    },
+    {
+      "word": "bugger",
+      "category": "expletive",
+      "severity": "medium",
+      "replacement": "annoying person",
+      "note": "Kasar, jangan digunakan di lingkungan formal."
+    },
+    {
+      "word": "crap",
+      "category": "informal",
+      "severity": "low",
+      "replacement": "bad / rubbish",
+      "note": "Bahasa kasar ringan untuk sesuatu yang buruk."
+    },
+    {
+      "word": "rogered",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "defeated / exhausted",
+      "note": "Slang British untuk hubungan seksual; sangat kasar."
+    },
+    {
+      "word": "shag",
+      "category": "slang",
+      "severity": "high",
+      "replacement": "dance / tired",
+      "note": "Umum di UK, bermakna vulgar."
+    },
+    {
+      "word": "horny",
+      "category": "sexual",
+      "severity": "medium",
+      "replacement": "aroused / excited",
+      "note": "Konteks seksual, tidak pantas untuk edukasi umum."
+    },
+    {
+      "word": "nuts",
+      "category": "informal",
+      "severity": "low",
+      "replacement": "crazy",
+      "note": "Bisa berarti kacang, gila, atau bagian tubuh pria."
+    },
+    {
+      "word": "pissed",
+      "category": "slang",
+      "severity": "medium",
+      "replacement": "angry / drunk",
+      "note": "Marah (US) atau sangat mabuk (UK). Kurang sopan."
+    },
+    {
+      "word": "bastard",
+      "category": "insult",
+      "severity": "high",
+      "replacement": "jerk",
+      "note": "Hinaan kasar."
+    },
+    {
+      "word": "bloody",
+      "category": "expletive",
+      "severity": "low",
+      "replacement": "very",
+      "note": "Sangat umum di UK, tapi dianggap kurang sopan oleh orang tua."
+    },
+    {
+      "word": "bollocks",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "nonsense",
+      "note": "Kasar, merujuk pada anatomi pria atau kebohongan."
+    },
+    {
+      "word": "bugger",
+      "category": "expletive",
+      "severity": "medium",
+      "replacement": "annoying person",
+      "note": "Kasar, jangan digunakan di lingkungan formal."
+    },
+    {
+      "word": "crap",
+      "category": "informal",
+      "severity": "low",
+      "replacement": "bad / rubbish",
+      "note": "Bahasa kasar ringan untuk sesuatu yang buruk."
+    },
+    {
+      "word": "fuck",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "mess up / very",
+      "note": "Kata paling kasar untuk hubungan seksual atau intensifier; hindari total di konten edukasi."
+    },
+    {
+      "word": "fucked",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "broken / exhausted",
+      "note": "Bentuk past dari fuck; sering berarti rusak atau lelah secara vulgar."
+    },
+    {
+      "word": "boner",
+      "category": "sexual",
+      "severity": "high",
+      "replacement": "mistake",
+      "note": "Slang untuk ereksi penis; sangat tidak pantas."
+    },
+    {
+      "word": "dick",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "jerk",
+      "note": "Merujuk pada penis atau panggilan hinaan; double meaning dengan nama orang."
+    },
+    {
+      "word": "cock",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "rooster",
+      "note": "Slang vulgar untuk penis; juga ayam jantan (polos)."
+    },
+    {
+      "word": "pussy",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "cat / coward",
+      "note": "Sangat vulgar untuk vagina atau orang penakut."
+    },
+    {
+      "word": "cunt",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "jerk",
+      "note": "Salah satu kata paling kasar untuk vagina atau hinaan; sangat offensive terutama di US."
+    },
+    {
+      "word": "twat",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "idiot",
+      "note": "Vulgar untuk vagina atau orang bodoh; mirip cunt tapi sedikit lebih ringan di UK."
+    },
+    {
+      "word": "wank",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "fool around",
+      "note": "British slang untuk masturbasi; kasar."
+    },
+    {
+      "word": "jerk off",
+      "category": "sexual",
+      "severity": "high",
+      "replacement": "relax / mess around",
+      "note": "Slang untuk masturbasi pria."
+    },
+    {
+      "word": "blowjob",
+      "category": "sexual",
+      "severity": "high",
+      "replacement": "oral task",
+      "note": "Oral seks pada penis; sangat eksplisit."
+    },
+    {
+      "word": "screw",
+      "category": "slang",
+      "severity": "medium",
+      "replacement": "fix / mess up",
+      "note": "Bisa berarti hubungan seksual atau mengacaukan sesuatu."
+    },
+    {
+      "word": "bang",
+      "category": "slang",
+      "severity": "medium",
+      "replacement": "hit / loud sound",
+      "note": "Slang modern untuk hubungan seksual (smash/bang)."
+    },
+    {
+      "word": "smash",
+      "category": "slang",
+      "severity": "medium",
+      "replacement": "break / hit hard",
+      "note": "Slang anak muda untuk casual sex."
+    },
+    {
+      "word": "laid",
+      "category": "slang",
+      "severity": "medium",
+      "replacement": "placed",
+      "note": "Get laid = berhubungan seks."
+    },
+    {
+      "word": "randy",
+      "category": "sexual",
+      "severity": "medium",
+      "replacement": "energetic",
+      "note": "British untuk horny/aroused."
+    },
+    {
+      "word": "thirsty",
+      "category": "slang",
+      "severity": "low",
+      "replacement": "eager",
+      "note": "Slang modern untuk desperate for sexual attention."
+    },
+    {
+      "word": "knob",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "handle / idiot",
+      "note": "British slang untuk penis."
+    },
+    {
+      "word": "balls",
+      "category": "vulgar",
+      "severity": "medium",
+      "replacement": "courage / testicles",
+      "note": "Bisa berarti keberanian atau testis."
+    },
+    {
+      "word": "tit",
+      "category": "vulgar",
+      "severity": "medium",
+      "replacement": "idiot / bird",
+      "note": "Slang untuk payudara; juga panggilan konyol."
+    },
+    {
+      "word": "arse",
+      "category": "vulgar",
+      "severity": "medium",
+      "replacement": "butt / fool",
+      "note": "British spelling untuk ass; bisa vulgar atau hinaan."
+    },
+    {
+      "word": "fanny",
+      "category": "vulgar",
+      "severity": "medium",
+      "replacement": "butt",
+      "note": "Di UK berarti vagina (sangat vulgar), di US berarti pantat (lebih ringan)."
+    },
+    {
+      "word": "shit",
+      "category": "vulgar",
+      "severity": "medium",
+      "replacement": "stuff / bad",
+      "note": "Kata kotor umum; bisa merujuk feses atau intensifier."
+    },
+    {
+      "word": "cum",
+      "category": "sexual",
+      "severity": "high",
+      "replacement": "come",
+      "note": "Slang vulgar untuk air mani atau orgasme."
+    },
+    {
+      "word": "wet",
+      "category": "sexual",
+      "severity": "low",
+      "replacement": "moist",
+      "note": "Dalam konteks seksual sering berarti aroused (wanita)."
+    },
+    {
+      "word": "hard",
+      "category": "sexual",
+      "severity": "low",
+      "replacement": "difficult / firm",
+      "note": "Double meaning: ereksi (get hard)."
+    },
+    {
+      "word": "come",
+      "category": "sexual",
+      "severity": "low",
+      "replacement": "arrive",
+      "note": "Double meaning: orgasme (come/cum)."
+    },
+    {
+      "word": "sange",
+      "category": "slang",
+      "severity": "medium",
+      "replacement": "excited",
+      "note": "Slang Indonesia untuk horny/aroused; sering dipakai anak muda."
+    },
+    {
+      "word": "rogered",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "defeated / exhausted",
+      "note": "Slang British untuk hubungan seksual; sangat kasar."
+    },
+    {
+      "word": "shag",
+      "category": "slang",
+      "severity": "high",
+      "replacement": "dance / tired",
+      "note": "UK slang utama untuk berhubungan seks."
+    },
+    {
+      "word": "horny",
+      "category": "sexual",
+      "severity": "medium",
+      "replacement": "aroused / excited",
+      "note": "Konteks seksual, tidak pantas untuk edukasi umum."
+    },
+    {
+      "word": "nuts",
+      "category": "informal",
+      "severity": "low",
+      "replacement": "crazy",
+      "note": "Bisa berarti kacang, gila, atau testis."
+    },
+    {
+      "word": "pissed",
+      "category": "slang",
+      "severity": "medium",
+      "replacement": "angry / drunk",
+      "note": "Marah (US) atau mabuk berat (UK)."
+    },
+    {
+      "word": "bastard",
+      "category": "insult",
+      "severity": "high",
+      "replacement": "jerk",
+      "note": "Hinaan kasar."
+    },
+    {
+      "word": "bloody",
+      "category": "expletive",
+      "severity": "low",
+      "replacement": "very",
+      "note": "Intensifier UK yang kurang sopan."
+    },
+    {
+      "word": "bollocks",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "nonsense",
+      "note": "Testis atau omong kosong; sangat kasar di UK."
+    },
+    {
+      "word": "bugger",
+      "category": "expletive",
+      "severity": "medium",
+      "replacement": "annoying person",
+      "note": "Kasar, asal-usul merujuk sodomi."
+    },
+    {
+      "word": "crap",
+      "category": "informal",
+      "severity": "low",
+      "replacement": "bad / rubbish",
+      "note": "Bahasa kasar ringan."
+    },
+    {
+      "word": "fuck",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "mess up / very",
+      "note": "Kata kasar universal untuk seks atau intensifier."
+    },
+    {
+      "word": "boner",
+      "category": "sexual",
+      "severity": "high",
+      "replacement": "mistake",
+      "note": "Ereksi penis (US/UK)."
+    },
+    {
+      "word": "dick",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "jerk",
+      "note": "Penis atau hinaan."
+    },
+    {
+      "word": "cock",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "rooster",
+      "note": "UK/US slang untuk penis."
+    },
+    {
+      "word": "pussy",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "cat / coward",
+      "note": "Vagina atau penakut."
+    },
+    {
+      "word": "cunt",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "jerk",
+      "note": "Sangat kasar untuk vagina (lebih offensive di US)."
+    },
+    {
+      "word": "wank",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "fool around",
+      "note": "British slang untuk masturbasi."
+    },
+    {
+      "word": "wanker",
+      "category": "insult",
+      "severity": "high",
+      "replacement": "jerk",
+      "note": "Orang yang masturbasi; hinaan umum di UK."
+    },
+    {
+      "word": "knob",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "handle / idiot",
+      "note": "British slang untuk penis."
+    },
+    {
+      "word": "bellend",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "idiot",
+      "note": "Ujung penis; hinaan kasar di UK."
+    },
+    {
+      "word": "fanny",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "butt",
+      "note": "Di UK = vagina (sangat vulgar); di US = pantat."
+    },
+    {
+      "word": "arse",
+      "category": "vulgar",
+      "severity": "medium",
+      "replacement": "butt / fool",
+      "note": "British untuk pantat."
+    },
+    {
+      "word": "get your end away",
+      "category": "slang",
+      "severity": "high",
+      "replacement": "go somewhere",
+      "note": "UK slang untuk berhubungan seks."
+    },
+    {
+      "word": "having it off",
+      "category": "slang",
+      "severity": "high",
+      "replacement": "having fun",
+      "note": "British untuk berhubungan seks."
+    },
+    {
+      "word": "randy",
+      "category": "sexual",
+      "severity": "medium",
+      "replacement": "energetic",
+      "note": "UK untuk horny/aroused."
+    },
+    {
+      "word": "smash",
+      "category": "slang",
+      "severity": "medium",
+      "replacement": "break / hit hard",
+      "note": "US teen slang untuk casual sex."
+    },
+    {
+      "word": "thirsty",
+      "category": "slang",
+      "severity": "medium",
+      "replacement": "eager",
+      "note": "US teen: desperate for sexual attention / horny."
+    },
+    {
+      "word": "body count",
+      "category": "slang",
+      "severity": "medium",
+      "replacement": "number of people",
+      "note": "US teen: jumlah pasangan seksual."
+    },
+    {
+      "word": "hook up",
+      "category": "slang",
+      "severity": "medium",
+      "replacement": "meet up",
+      "note": "US teen: bertemu untuk aktivitas seksual."
+    },
+    {
+      "word": "netflix and chill",
+      "category": "slang",
+      "severity": "medium",
+      "replacement": "watch movie and relax",
+      "note": "US teen euphemism untuk hook up / seks."
+    },
+    {
+      "word": "fwb",
+      "category": "slang",
+      "severity": "medium",
+      "replacement": "friends",
+      "note": "Friends with benefits (hubungan seks tanpa komitmen)."
+    },
+    {
+      "word": "sange",
+      "category": "slang",
+      "severity": "medium",
+      "replacement": "excited",
+      "note": "Indonesia: horny / nafsu seksual."
+    },
+    {
+      "word": "coli",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "play alone",
+      "note": "Indonesia: masturbasi (colmek untuk wanita)."
+    },
+    {
+      "word": "entot",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "poke",
+      "note": "Indonesia vulgar untuk berhubungan seks."
+    },
+    {
+      "word": "ngentot",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "do it",
+      "note": "Indonesia kasar untuk fuck / seks."
+    },
+    {
+      "word": "basah",
+      "category": "sexual",
+      "severity": "medium",
+      "replacement": "wet",
+      "note": "Indonesia: sering merujuk aroused wanita (basah)."
+    },
+    {
+      "word": "gatel",
+      "category": "sexual",
+      "severity": "medium",
+      "replacement": "itchy",
+      "note": "Indonesia campur: horny / gatal nafsu."
+    },
+    {
+      "word": "goyang",
+      "category": "slang",
+      "severity": "low",
+      "replacement": "dance / shake",
+      "note": "Indonesia: goyang pinggul sering konteks seksual."
+    },
+    {
+      "word": "titit",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "small thing",
+      "note": "Indonesia anak muda: penis."
+    },
+    {
+      "word": "memek",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "cat",
+      "note": "Indonesia vulgar untuk vagina."
+    },
+    {
+      "word": "kontol",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "stick",
+      "note": "Indonesia kasar untuk penis."
+    },
+    {
+      "word": "cum",
+      "category": "sexual",
+      "severity": "high",
+      "replacement": "come",
+      "note": "Slang untuk air mani atau orgasme."
+    },
+    {
+      "word": "get laid",
+      "category": "slang",
+      "severity": "medium",
+      "replacement": "get placed",
+      "note": "US/UK: berhasil berhubungan seks."
+    },
+    {
+      "word": "bang",
+      "category": "slang",
+      "severity": "medium",
+      "replacement": "hit / loud sound",
+      "note": "Slang untuk hubungan seksual."
+    },
+    {
+      "word": "cum",
+      "category": "sexual",
+      "severity": "high",
+      "replacement": "come",
+      "note": "Slang untuk air mani atau orgasme."
+    },
+    {
+      "word": "get laid",
+      "category": "slang",
+      "severity": "medium",
+      "replacement": "get placed",
+      "note": "US/UK: berhasil berhubungan seks."
+    },
+    {
+      "word": "clitoris",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "organ sensitif wanita",
+      "note": "Organ seksual wanita yang sangat sensitif terhadap rangsangan (bagian klitoris). Istilah medis standar."
+    },
+    {
+      "word": "klitoris",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "organ sensitif wanita",
+      "note": "Istilah Indonesia untuk clitoris. Sering muncul di konteks edukasi atau vulgar."
+    },
+    {
+      "word": "penetration",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "penetrasi / masuknya",
+      "note": "Masuknya penis ke vagina atau anus dalam hubungan seksual. Istilah medis untuk vaginal intercourse."
+    },
+    {
+      "word": "penetrasi",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "masuknya",
+      "note": "Istilah Indonesia untuk penetration. Sering digunakan dalam konteks seksual."
+    },
+    {
+      "word": "vagina",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "saluran kelahiran",
+      "note": "Organ reproduksi wanita yang menjadi jalur hubungan seksual dan persalinan."
+    },
+    {
+      "word": "penis",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "alat kelamin pria",
+      "note": "Organ reproduksi dan seksual pria. Istilah medis netral tapi sensitif."
+    },
+    {
+      "word": "ejaculation",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "pengeluaran cairan",
+      "note": "Pengeluaran air mani saat orgasme pria. Istilah medis untuk proses ejakulasi."
+    },
+    {
+      "word": "ejakulasi",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "pengeluaran cairan",
+      "note": "Istilah Indonesia untuk ejaculation."
+    },
+    {
+      "word": "orgasm",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "puncak kenikmatan",
+      "note": "Puncak sensasi seksual (orgasme). Bisa muncul di konteks medis atau vulgar."
+    },
+    {
+      "word": "orgasme",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "puncak kenikmatan",
+      "note": "Istilah Indonesia untuk orgasm."
+    },
+    {
+      "word": "vulva",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "alat kelamin luar wanita",
+      "note": "Bagian luar organ kelamin wanita (termasuk labia dan klitoris)."
+    },
+    {
+      "word": "labia",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "bibir kemaluan",
+      "note": "Bibir bagian luar atau dalam organ kelamin wanita (labia majora/minora)."
+    },
+    {
+      "word": "testis",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "buah zakar",
+      "note": "Organ pria yang memproduksi sperma dan testosteron."
+    },
+    {
+      "word": "testicle",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "buah zakar",
+      "note": "Istilah Inggris untuk testis."
+    },
+    {
+      "word": "scrotum",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "kantong zakar",
+      "note": "Kantung yang membungkus testis."
+    },
+    {
+      "word": "sperm",
+      "category": "biological",
+      "severity": "low",
+      "replacement": "sel reproduksi pria",
+      "note": "Sel kelamin pria (sperma). Bisa netral di konteks biologi tapi sensitif."
+    },
+    {
+      "word": "sperma",
+      "category": "biological",
+      "severity": "low",
+      "replacement": "sel reproduksi pria",
+      "note": "Istilah Indonesia untuk sperm."
+    },
+    {
+      "word": "erection",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "pembengkakan",
+      "note": "Pengerasan penis karena aliran darah (ereksi)."
+    },
+    {
+      "word": "ereksi",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "pembengkakan",
+      "note": "Istilah Indonesia untuk erection."
+    },
+    {
+      "word": "intercourse",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "hubungan intim",
+      "note": "Hubungan seksual yang melibatkan penetrasi (sexual intercourse)."
+    },
+    {
+      "word": "coitus",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "hubungan intim",
+      "note": "Istilah medis formal untuk hubungan seksual dengan penetrasi."
+    },
+    {
+      "word": "cervix",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "leher rahim",
+      "note": "Bagian bawah rahim yang terhubung dengan vagina."
+    },
+    {
+      "word": "uterus",
+      "category": "medical",
+      "severity": "low",
+      "replacement": "rahim",
+      "note": "Organ tempat janin berkembang (bisa muncul di konteks medis atau seksual)."
+    },
+    {
+      "word": "cum",
+      "category": "sexual",
+      "severity": "high",
+      "replacement": "come",
+      "note": "Slang untuk air mani atau orgasme."
+    },
+    {
+      "word": "get laid",
+      "category": "slang",
+      "severity": "medium",
+      "replacement": "get placed",
+      "note": "US/UK: berhasil berhubungan seks."
+    },
+    {
+      "word": "scrotum",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "kantong zakar",
+      "note": "Kantung kulit yang membungkus testis (buah zakar). Istilah biologi dasar untuk organ reproduksi pria."
+    },
+    {
+      "word": "baculum",
+      "category": "biological",
+      "severity": "medium",
+      "replacement": "tulang penis",
+      "note": "Tulang penis (os penis) yang ada di banyak mamalia (seperti primata, anjing, kucing). TIDAK ada pada manusia."
+    },
+    {
+      "word": "os penis",
+      "category": "biological",
+      "severity": "medium",
+      "replacement": "tulang penis",
+      "note": "Nama lain untuk baculum (tulang penis pada hewan). Sering muncul di konteks biologi perbandingan."
+    },
+    {
+      "word": "glans penis",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "kepala penis",
+      "note": "Bagian ujung penis yang sangat sensitif (kepala penis). Istilah medis detail."
+    },
+    {
+      "word": "corpus cavernosum",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "jaringan ereksi penis",
+      "note": "Dua silinder jaringan ereksi di dalam penis yang terisi darah saat ereksi."
+    },
+    {
+      "word": "corpus spongiosum",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "jaringan spons penis",
+      "note": "Jaringan ereksi yang mengelilingi uretra di dalam penis."
+    },
+    {
+      "word": "frenulum",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "ikat tali penis",
+      "note": "Jaringan kecil yang menghubungkan kulup dengan kepala penis (frenulum penis). Sangat sensitif."
+    },
+    {
+      "word": "prepuce",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "kulup penis",
+      "note": "Kulit yang menutupi glans penis (foreskin). Istilah medis resmi."
+    },
+    {
+      "word": "foreskin",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "kulup penis",
+      "note": "Kulit pelindung kepala penis (prepuce)."
+    },
+    {
+      "word": "epididymis",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "saluran penyimpanan sperma",
+      "note": "Saluran panjang di belakang testis tempat sperma matang."
+    },
+    {
+      "word": "vas deferens",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "saluran sperma",
+      "note": "Saluran yang membawa sperma dari epididymis ke uretra."
+    },
+    {
+      "word": "seminal vesicle",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "kelenjar seminal",
+      "note": "Kelenjar yang menghasilkan cairan semen (60% volume semen)."
+    },
+    {
+      "word": "prostate gland",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "kelenjar prostat",
+      "note": "Kelenjar di bawah kandung kemih yang menghasilkan cairan semen dan sering disebut P-spot."
+    },
+    {
+      "word": "bulbourethral gland",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "kelenjar Cowper",
+      "note": "Kelenjar kecil yang menghasilkan cairan pra-ejakulasi (pre-cum)."
+    },
+    {
+      "word": "mons pubis",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "bukit kemaluan",
+      "note": "Bukit lemak di atas tulang kemaluan wanita (bagian luar vulva)."
+    },
+    {
+      "word": "labia majora",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "bibir luar kemaluan",
+      "note": "Bibir luar organ kelamin wanita (vulva)."
+    },
+    {
+      "word": "labia minora",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "bibir dalam kemaluan",
+      "note": "Bibir dalam yang lebih tipis di vulva wanita."
+    },
+    {
+      "word": "clitoral hood",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "kulup klitoris",
+      "note": "Kulit yang melindungi klitoris (prepuce clitoris)."
+    },
+    {
+      "word": "vestibule",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "ruang depan vagina",
+      "note": "Area antara labia minora yang mencakup lubang vagina dan uretra."
+    },
+    {
+      "word": "hymen",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "selaput dara",
+      "note": "Selaput tipis di pintu masuk vagina (bisa robek saat penetrasi pertama)."
+    },
+    {
+      "word": "g-spot",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "titik sensitif wanita",
+      "note": "Grafenberg spot – area sensitif di dinding depan vagina (kontroversial tapi sering disebut)."
+    },
+    {
+      "word": "semen",
+      "category": "biological",
+      "severity": "medium",
+      "replacement": "cairan mani",
+      "note": "Cairan yang dikeluarkan saat ejakulasi (campuran sperma + cairan kelenjar)."
+    },
+    {
+      "word": "pre-ejaculate",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "cairan pra-ejakulasi",
+      "note": "Cairan bening yang keluar sebelum ejakulasi (pre-cum) dari kelenjar Cowper."
+    },
+    {
+      "word": "spermatozoa",
+      "category": "biological",
+      "severity": "low",
+      "replacement": "-",
+      "note": "Sel reproduksi pria (sperm)."
+    },
+    {
+      "word": "urethra",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "-",
+      "note": "Saluran yang mengeluarkan urine dan semen pada pria (juga bagian dari penis)."
+    },
+    {
+      "word": "fuck",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "mess up / very",
+      "note": "Kata kasar universal untuk hubungan seksual atau intensifier."
+    },
+    {
+      "word": "shag",
+      "category": "slang",
+      "severity": "high",
+      "replacement": "dance / tired",
+      "note": "UK slang untuk berhubungan seks."
+    },
+    {
+      "word": "horny",
+      "category": "sexual",
+      "severity": "medium",
+      "replacement": "aroused / excited",
+      "note": "Merasa nafsu seksual."
+    },
+    {
+      "word": "sange",
+      "category": "slang",
+      "severity": "medium",
+      "replacement": "excited",
+      "note": "Slang Indonesia untuk horny / nafsu seksual."
+    },
+    {
+      "word": "sange heavy",
+      "category": "slang",
+      "severity": "high",
+      "replacement": "sangat excited",
+      "note": "Varian Gen Z Indo 2026: horny parah."
+    },
+    {
+      "word": "ngaceng",
+      "category": "vulgar",
+      "severity": "high",
+      "replacement": "tegang",
+      "note": "Ereksi penis (slang Indonesia)."
+    },
+    {
+      "word": "basah kuyup",
+      "category": "sexual",
+      "severity": "high",
+      "replacement": "sangat basah",
+      "note": "Merujuk vagina yang sangat aroused."
+    },
+    {
+      "word": "gyatt",
+      "category": "slang",
+      "severity": "medium",
+      "replacement": "wow pantat",
+      "note": "Gen Alpha/Gen Z: reaksi ke pantat besar (sering seksual)."
+    },
+    {
+      "word": "rizz",
+      "category": "slang",
+      "severity": "low",
+      "replacement": "pesona flirting",
+      "note": "Charisma untuk flirting (bisa mengarah ke konteks seksual)."
+    },
+    {
+      "word": "sigma sange",
+      "category": "slang",
+      "severity": "medium",
+      "replacement": "mandiri tapi horny",
+      "note": "Campuran Gen Z + Gen Alpha Indo."
+    },
+    {
+      "word": "cum",
+      "category": "sexual",
+      "severity": "high",
+      "replacement": "come",
+      "note": "Slang untuk air mani atau orgasme."
+    },
+    {
+      "word": "get laid",
+      "category": "slang",
+      "severity": "medium",
+      "replacement": "get placed",
+      "note": "Berhasil berhubungan seks."
+    },
+    {
+      "word": "clitoris",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "organ sensitif wanita",
+      "note": "Organ seksual wanita yang sangat sensitif (bagian klitoris)."
+    },
+    {
+      "word": "penetration",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "penetrasi",
+      "note": "Masuknya penis ke vagina atau anus dalam hubungan seksual."
+    },
+    {
+      "word": "vagina",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "saluran kelahiran",
+      "note": "Organ reproduksi wanita."
+    },
+    {
+      "word": "penis",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "alat kelamin pria",
+      "note": "Organ reproduksi pria."
+    },
+    {
+      "word": "scrotum",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "kantong zakar",
+      "note": "Kantung kulit yang membungkus testis."
+    },
+    {
+      "word": "glans penis",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "kepala penis",
+      "note": "Ujung penis yang sangat sensitif."
+    },
+    {
+      "word": "corpus cavernosum",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "jaringan ereksi penis",
+      "note": "Jaringan utama yang menyebabkan ereksi pada penis."
+    },
+    {
+      "word": "foreskin",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "kulup penis",
+      "note": "Kulit yang menutupi kepala penis (prepuce)."
+    },
+    {
+      "word": "prostate gland",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "kelenjar prostat",
+      "note": "Kelenjar pria yang menghasilkan cairan semen (sering disebut P-spot)."
+    },
+    {
+      "word": "labia majora",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "bibir luar kemaluan",
+      "note": "Bibir luar organ kelamin wanita (vulva)."
+    },
+    {
+      "word": "labia minora",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "bibir dalam kemaluan",
+      "note": "Bibir dalam yang lebih sensitif di vulva."
+    },
+    {
+      "word": "clitoral hood",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "kulup klitoris",
+      "note": "Kulit pelindung klitoris."
+    },
+    {
+      "word": "g-spot",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "titik sensitif wanita",
+      "note": "Area sensitif di dinding depan vagina."
+    },
+    {
+      "word": "erection",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "pembengkakan",
+      "note": "Pengerasan penis karena aliran darah."
+    },
+    {
+      "word": "ejaculation",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "pengeluaran cairan",
+      "note": "Pengeluaran air mani saat orgasme."
+    },
+    {
+      "word": "semen",
+      "category": "biological",
+      "severity": "medium",
+      "replacement": "cairan mani",
+      "note": "Cairan yang mengandung sperma."
+    },
+    {
+      "word": "pre-ejaculate",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "cairan pra-ejakulasi",
+      "note": "Cairan bening sebelum ejakulasi (pre-cum)."
+    },
+    {
+      "word": "baculum",
+      "category": "biological",
+      "severity": "medium",
+      "replacement": "tulang penis",
+      "note": "Tulang penis yang ada pada banyak hewan mamalia (tidak ada pada manusia)."
+    },
+    {
+      "word": "mons pubis",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "bukit kemaluan",
+      "note": "Bukit lemak di atas tulang kemaluan wanita."
+    },
+    {
+      "word": "hymen",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "selaput dara",
+      "note": "Selaput tipis di pintu masuk vagina."
+    },
+
+    {
+      "word": "crus penis",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "kaki organ reproduksi pria",
+      "note": "Bagian akar (root) penis yang melekat ke tulang panggul (ischium). Plural: crura penis. Bagian dari corpus cavernosum yang penting untuk ereksi."
+    },
+    {
+      "word": "crus",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "-",
+      "note": "Bagian akar (root) penis yang melekat ke tulang panggul (ischium). Plural: crura penis. Bagian dari corpus cavernosum yang penting untuk ereksi."
+    },
+    {
+      "word": "crura penis",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "kaki penis",
+      "note": "Bentuk jamak dari crus penis. Dua 'kaki' penis yang ditutupi otot ischiocavernosus."
+    },
+    {
+      "word": "crus clitoridis",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "kaki klitoris",
+      "note": "Bagian akar klitoris (crura clitoridis) yang melekat ke tulang panggul. Homolog dengan crus penis. Sangat sensitif."
+    },
+    {
+      "word": "crura clitoridis",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "kaki klitoris",
+      "note": "Bentuk jamak dari crus clitoridis. Bagian internal klitoris yang terdiri dari jaringan ereksi."
+    },
+    {
+      "word": "ischiocavernosus muscle",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "otot ischiocavernosus",
+      "note": "Otot yang menutupi crus penis/clitoridis. Berperan penting dalam menjaga ereksi dengan menekan aliran darah balik."
+    },
+    {
+      "word": "bulbospongiosus muscle",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "otot bulbospongiosus",
+      "note": "Otot yang menutupi bulb penis atau bulb vestibule. Berperan dalam ejakulasi (pria) dan kontraksi orgasme (wanita)."
+    },
+    {
+      "word": "tunica albuginea",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "selaput putih penis",
+      "note": "Selaput fibrosa tebal yang mengelilingi corpus cavernosum dan corpus spongiosum. Menyebabkan penis mengeras saat ereksi."
+    },
+    {
+      "word": "suspensory ligament of the penis",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "ligamen penyangga penis",
+      "note": "Ligamen yang menghubungkan akar penis ke tulang kemaluan. Memberi dukungan saat ereksi."
+    },
+    {
+      "word": "suspensory ligament of the clitoris",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "ligamen penyangga klitoris",
+      "note": "Ligamen yang menahan klitoris ke tulang kemaluan (homolog dengan suspensory ligament penis)."
+    },
+    {
+      "word": "bulb of the penis",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "umbi organ reproduksi pria",
+      "note": "Bagian membesar dari corpus spongiosum di akar penis. Ditutupi otot bulbospongiosus."
+    },
+    {
+      "word": "bulb of the vestibule",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "umbi vestibule",
+      "note": "Jaringan ereksi di dasar labia minora wanita (homolog dengan bulb penis). Membengkak saat aroused."
+    },
+    {
+      "word": "vestibular bulbs",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "umbi vestibule",
+      "note": "Dua struktur ereksi di sisi vagina (corpus spongiosum wanita). Penting untuk sensasi seksual."
+    },
+    {
+      "word": "skene's gland",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "kelenjar skene",
+      "note": "Kelenjar paraurethral wanita (homolog dengan prostat pria). Menghasilkan cairan saat squirting/ejakulasi wanita."
+    },
+    {
+      "word": "bartholin's gland",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "kelenjar bartholin",
+      "note": "Kelenjar vestibular besar wanita (greater vestibular gland). Menghasilkan pelumas vagina saat aroused."
+    },
+    {
+      "word": "perineum",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "perineum",
+      "note": "Daerah antara anus dan alat kelamin luar. Sering terlibat dalam trauma seksual atau persalinan."
+    },
+    {
+      "word": "posterior fourchette",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "fourchette belakang",
+      "note": "Titik pertemuan labia minora di belakang vagina. Sering robek saat penetrasi pertama atau trauma."
+    },
+    {
+      "word": "vaginal introitus",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "pintu masuk organ reproduksi wanita",
+      "note": "Pembukaan vagina (introitus). Dikelilingi hymen dan vestibule."
+    },
+    {
+      "word": "fundiform ligament",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "ligamen fundiform",
+      "note": "Ligamen superfisial yang mendukung akar penis/klitoris (bagian dari suspensory ligament system)."
+    },
+    {
+      "word": "ischiocavernosus muscle",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "otot ischiocavernosus",
+      "note": "Otot yang menutupi crus penis atau crus clitoridis. Berfungsi menekan aliran darah balik untuk mempertahankan ereksi."
+    },
+    {
+      "word": "bulbospongiosus muscle",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "otot bulbospongiosus",
+      "note": "Otot yang menutupi bulb penis atau vestibular bulbs. Berperan dalam ejakulasi (pria) dan kontraksi orgasme (wanita)."
+    },
+    {
+      "word": "tunica albuginea",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "selaput putih",
+      "note": "Selaput fibrosa tebal yang mengelilingi corpus cavernosum. Tidak bisa meregang sehingga menyebabkan penis/klitoris mengeras saat terisi darah."
+    },
+    {
+      "word": "vestibular bulbs",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "umbi vestibule",
+      "note": "Dua struktur ereksi wanita (clitoral bulbs) yang homolog dengan bulb penis."
+    },
+    {
+      "word": "suspensory ligament of the penis",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "ligamen penyangga penis",
+      "note": "Ligamen yang menghubungkan akar penis ke tulang kemaluan (pubic symphysis). Memberikan dukungan saat ereksi."
+    },
+    {
+      "word": "suspensory ligament of the clitoris",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "ligamen penyangga klitoris",
+      "note": "Homolog dengan suspensory ligament penis. Menahan klitoris ke tulang kemaluan."
+    },
+    {
+      "word": "fundiform ligament",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "ligamen fundiform",
+      "note": "Ligamen superfisial yang mendukung akar penis/klitoris (bagian dari sistem ligamen suspensori)."
+    },
+    {
+      "word": "posterior fourchette",
+      "category": "medical",
+      "severity": "high",
+      "replacement": "fourchette belakang",
+      "note": "Titik pertemuan labia minora di belakang vagina. Sering robek saat penetrasi pertama."
+    },
+    {
+      "word": "vaginal introitus",
+      "category": "medical",
+      "severity": "medium",
+      "replacement": "-",
+      "note": "Pembukaan vagina (introitus) yang dikelilingi hymen dan vestibule."
+    }
+  ]
+}

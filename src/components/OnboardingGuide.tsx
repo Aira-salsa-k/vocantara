@@ -1,111 +1,177 @@
 import React, { useState } from "react";
-import { X, ArrowRight } from "lucide-react";
+import { X, ArrowRight, ArrowLeft } from "lucide-react";
 
 // Definisikan tipe untuk setiap langkah
 interface OnboardingStep {
-	title: string;
-	content: string;
-	imageUrl?: string; // URL untuk GIF atau gambar
+  title: string;
+  content: string;
+  imageUrl?: string; // URL untuk GIF, Gambar, atau Video (.mov, .mp4)
 }
 
 // Konten untuk setiap langkah onboarding
 const steps: OnboardingStep[] = [
-	{
-		title: "Selamat Datang di Vocantara!",
-		content:
-			"Aplikasi ini dirancang untuk membantu Anda mempelajari kosa kata Bahasa Inggris dengan cara yang interaktif dan menyenangkan. Mari kita mulai!",
-		imageUrl: "https://placehold.co/400x200/6366f1/ffffff?text=Selamat+Datang",
-	},
-	{
-		title: "Cara Menggunakan Penerjemah",
-		content:
-			"Cukup ketik kalimat dalam Bahasa Indonesia di kolom yang tersedia, dan kami akan langsung menerjemahkannya ke dalam Bahasa Inggris untuk Anda.",
-		imageUrl: "https://placehold.co/400x200/34d399/ffffff?text=Ketik+Kalimatmu",
-	},
-	{
-		title: "Mulai Latihan Anda",
-		content:
-			"Gunakan fitur ini setiap hari untuk melatih kemampuan Anda. Semakin sering berlatih, semakin cepat Anda mahir. Selamat belajar!",
-		imageUrl: "https://placehold.co/400x200/f59e0b/ffffff?text=Selamat+Belajar",
-	},
+  {
+    title: "Selamat Datang di Vocantara!",
+    content:
+      'Aplikasi ini dirancang untuk membantu Anda mempelajari kosa kata Bahasa Inggris.\n\nKlik tombol "Generate Vocabulary" untuk mendapatkan kosa kata baru.',
+    imageUrl: "/onboarding/ob-1.mov",
+  },
+  {
+    title: "Latihan Menulis Ulang\n\nKosa Kata",
+    content:
+      "Dari Kosa Kata yang di dapat, latih ingatan anda dengan menulis ulang kosa kata tersebut.",
+    imageUrl: "/onboarding/ob-2.mov",
+  },
+  {
+    title: "Latihan Merangkai Kalimat",
+    content:
+      "Dari Semua Kosa Kata yang di dapat, pertajam pemahaman anda dengan merangkai kosa kata tersebut menjadi kalimat.",
+    imageUrl: "/onboarding/ob-3.mov",
+  },
+  {
+    title: "Fitur Penerjemah Kata",
+    content:
+      "Gunakan fitur penerjemah untuk membantu Anda menerjemahkan kata atau kalimat yang belum di ketahui.",
+    imageUrl: "/onboarding/ob-4.mov",
+  },
+  {
+    title: "Mulai Latihan Anda",
+    content:
+      "Gunakan Vocantara setiap hari untuk melatih kemampuan Anda. Semakin sering berlatih, semakin cepat Anda mahir. Selamat belajar!",
+    imageUrl: "/b-vocantara.jpg",
+  },
 ];
 
 // Definisikan props untuk komponen
 interface OnboardingGuideProps {
-	onFinish: () => void;
+  onFinish: () => void;
 }
 
 const OnboardingGuide: React.FC<OnboardingGuideProps> = ({ onFinish }) => {
-	const [currentStep, setCurrentStep] = useState(0);
+  const [currentStep, setCurrentStep] = useState(0);
 
-	const handleNext = () => {
-		if (currentStep < steps.length - 1) {
-			setCurrentStep(currentStep + 1);
-		} else {
-			// Jika sudah di langkah terakhir, panggil onFinish
-			onFinish();
-		}
-	};
+  const handleNext = () => {
+    if (currentStep < steps.length - 1) {
+      setCurrentStep(currentStep + 1);
+    } else {
+      onFinish();
+    }
+  };
 
-	const currentStepData = steps[currentStep];
+  const handlePrev = () => {
+    if (currentStep > 0) {
+      setCurrentStep(currentStep - 1);
+    }
+  };
 
-	return (
-		// Backdrop
-		<div className="fixed inset-0 bg-black bg-opacity-60 z-40 flex justify-center items-center p-4 font-[Inter,sans-serif]">
-			{/* Konten Modal */}
-			<div className="bg-white rounded-xl shadow-2xl w-full max-w-md p-6 relative animate-fade-in-up">
-				{/* Tombol Tutup */}
-				<button
-					onClick={onFinish}
-					className="absolute top-4 right-4 text-gray-400 hover:text-gray-700 transition-colors"
-					aria-label="Tutup panduan"
-				>
-					<X size={24} />
-				</button>
+  const currentStepData = steps[currentStep];
 
-				{/* Gambar/GIF */}
-				{currentStepData.imageUrl && (
-					<div className="mb-4 rounded-lg overflow-hidden">
-						<img
-							src={currentStepData.imageUrl}
-							alt={currentStepData.title}
-							className="w-full h-auto object-cover"
-						/>
-					</div>
-				)}
+  return (
+    // Backdrop
+    <div className="fixed inset-0 bg-black/60 backdrop-blur-xs z-50 flex justify-center items-center p-5 sm:p-4">
+      {/* Konten Modal */}
+      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg p-4 sm:p-6 relative animate-fade-in-up flex flex-col">
+        {/* Tombol Tutup */}
+        <button
+          onClick={onFinish}
+          className="absolute top-4 right-4 text-gray-400 hover:text-gray-800 transition-colors p-1 rounded-full hover:bg-gray-100"
+          aria-label="Tutup panduan"
+        >
+          <X size={24} />
+        </button>
 
-				{/* Judul dan Konten */}
-				<h2 className="text-2xl font-bold text-gray-800 mb-2">
-					{currentStepData.title}
-				</h2>
-				<p className="text-gray-600 mb-6">{currentStepData.content}</p>
+        {/* Header / Step Tracker */}
+        <div className="flex justify-start items-center space-x-2 mb-6 mt-2">
+          {steps.map((_, index) => (
+            <div
+              key={index}
+              className={`h-2 rounded-full transition-all duration-300 ${
+                index === currentStep
+                  ? "w-8 bg-indigo-600"
+                  : "w-2 bg-indigo-100"
+              }`}
+            ></div>
+          ))}
+        </div>
 
-				{/* Navigasi */}
-				<div className="flex justify-between items-center">
-					{/* Indikator Step */}
-					<div className="flex space-x-2">
-						{steps.map((_, index) => (
-							<div
-								key={index}
-								className={`w-2 h-2 rounded-full ${
-									index === currentStep ? "bg-indigo-600" : "bg-gray-300"
-								}`}
-							></div>
-						))}
-					</div>
+        {/* Media (Gambar/GIF/Video) */}
+        <div className="mb-6 rounded-xl overflow-hidden bg-gray-50 flex items-center justify-center min-h-[200px] shadow-inner">
+          {currentStepData.imageUrl ? (
+            currentStepData.imageUrl.toLowerCase().endsWith(".mov") ||
+            currentStepData.imageUrl.toLowerCase().endsWith(".mp4") ? (
+              <video
+                src={currentStepData.imageUrl}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-auto object-cover max-h-[250px]"
+              />
+            ) : (
+              <img
+                src={currentStepData.imageUrl}
+                alt={currentStepData.title}
+                className="w-full h-auto object-cover max-h-[250px]"
+              />
+            )
+          ) : (
+            <div className="text-gray-400 flex items-center justify-center">
+              No Media
+            </div>
+          )}
+        </div>
 
-					{/* Tombol Next/Finish */}
-					<button
-						onClick={handleNext}
-						className="bg-indigo-600 text-white font-semibold px-5 py-2 rounded-lg flex items-center gap-2 hover:bg-indigo-700 transition-transform transform active:scale-95"
-					>
-						{currentStep < steps.length - 1 ? "Lanjut" : "Selesai"}
-						<ArrowRight size={18} />
-					</button>
-				</div>
-			</div>
-		</div>
-	);
+        {/* Judul dan Konten */}
+        <div className="flex-1 min-h-[120px] px-2">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2">
+            {currentStepData.title}
+          </h2>
+          <p className="text-gray-600 leading-relaxed text-sm md:text-base whitespace-pre-line">
+            {currentStepData.content}
+          </p>
+        </div>
+
+        {/* Navigasi */}
+        <div className="flex justify-between items-center mt-6 pt-4 border-t border-gray-100">
+          <button
+            onClick={handlePrev}
+            disabled={currentStep === 0}
+            className={`font-semibold px-4 py-2 rounded-xl flex items-center gap-2 transition-all ${
+              currentStep === 0
+                ? "text-transparent bg-transparent cursor-default select-none"
+                : "text-gray-600 hover:bg-gray-100 active:scale-95"
+            }`}
+          >
+            {currentStep > 0 && (
+              <>
+                <ArrowLeft size={18} />
+                Sebelumnya
+              </>
+            )}
+          </button>
+
+          <button
+            onClick={handleNext}
+            className="
+			bg-indigo-600 text-white font-semibold 
+			px-4 py-2           // ukuran default (mobile)
+			sm:px-6 sm:py-2.5   // ukuran untuk layar >= 640px
+			rounded-xl 
+			flex items-center gap-1 sm:gap-2  // gap lebih kecil di mobile
+			hover:bg-indigo-700 
+			transition-all 
+			transform active:scale-95 
+		"
+          >
+            {currentStep < steps.length - 1 ? "Lanjut" : "Mulai Belajar"}
+            {currentStep < steps.length - 1 && (
+              <ArrowRight size={currentStep < steps.length - 1 ? 16 : 18} />
+            )}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default OnboardingGuide;

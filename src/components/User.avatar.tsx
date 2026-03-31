@@ -59,7 +59,7 @@ export default function UserAvatar() {
 									onClick={handleClose}
 								></div>
 
-								<div className="absolute  mt-2 left-0 bg-gray-50 shadow-lg rounded-lg border border-gray-300 p-4 pb-5 z-50 w-52 text-sm">
+								<div className="absolute  mt-2 left-0 bg-gray-50 shadow-lg rounded-lg border border-gray-300 p-4 pb-5 z-50 w-70 text-sm">
 									<div className="font-semibold text-gray-800 ">
 										{auth.currentUser.displayName || "User"}
 									</div>
