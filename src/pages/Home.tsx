@@ -724,7 +724,7 @@ export const Home = () => {
 
   useEffect(() => {
     const VISIT_COUNT_KEY = "vocantaraVisitCount";
-    const MAX_VISITS_FOR_ONBOARDING = 10;
+    const MAX_VISITS_FOR_ONBOARDING = 2; // Hanya muncul di kunjungan ke-1 dan ke-2
 
     const visitCountStr = localStorage.getItem(VISIT_COUNT_KEY);
     const visitCount = visitCountStr ? parseInt(visitCountStr, 10) : 0;
@@ -737,6 +737,8 @@ export const Home = () => {
 
   const handleOnboardingFinish = () => {
     setShowOnboarding(false);
+    // Simpan ke localStorage bahwa sudah pernah finish agar tidak muncul lagi di refresh berikutnya
+    localStorage.setItem("vocantaraVisitCount", "10");
   };
 
   return (
