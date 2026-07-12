@@ -21,10 +21,10 @@ export const HomeProgressBar: React.FC<HomeProgressBarProps> = ({
   return (
     <section className="max-w-lg w-full mx-auto mt-8 mb-8 px-10 sm:px-6 lg:px-0">
       <div className="mb-1 flex justify-between items-center">
-        <span className="text-sm font-semibold text-indigo-700 mb-1">
+        <span className="text-sm font-semibold text-indigo-700 dark:text-indigo-300 mb-1">
           Progress Kata: {progressWords}
         </span>
-        <span className="text-xs text-gray-600 mb-1">
+        <span className="text-xs text-gray-600 dark:text-neutral-300 mb-1">
           Level {progressLevel} ({progressWords}/
           {levelThresholds[progressLevel] ||
             levelThresholds[levelThresholds.length - 1]}
@@ -32,7 +32,7 @@ export const HomeProgressBar: React.FC<HomeProgressBarProps> = ({
         </span>
       </div>
 
-      <div className="relative w-full bg-gray-200 rounded-full h-3.5">
+      <div className="relative w-full bg-gray-200 dark:bg-neutral-700 rounded-full h-3.5">
         <div
           className="h-3.5 rounded-full bg-gradient-to-r from-indigo-400 via-indigo-500 to-indigo-800 transition-all duration-500 ease-out"
           style={{ width: `${progressPercent}%` }}
@@ -49,7 +49,7 @@ export const HomeProgressBar: React.FC<HomeProgressBarProps> = ({
         />
       </div>
 
-      <div className="text-xs text-gray-500 mt-2.5">
+      <div className="text-xs text-gray-500 dark:text-neutral-400 mt-2.5">
         {progressLevel < levelThresholds.length
           ? `Menuju Level ${progressLevel + 1}: ${nextLevelWords} kata`
           : "Level Maksimal Tercapai"}

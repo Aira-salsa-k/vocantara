@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
   --font-sans: 'Onest', ui-sans-serif, system-ui, sans-serif;
@@ -38,6 +39,16 @@ body {
     width: 450px !important;
   }
 }
+
+/* 🌙 Dark Mode untuk SweetAlert */
+.dark .swal2-popup {
+  background: #15181d !important; /* bg-gray-800 */
+  color: #f9fafb !important; /* text-gray-50 */
+}
+.dark .swal2-title, .dark .swal2-html-container {
+  color: #f9fafb !important;
+}
+
 @media (max-width: 480px) {
   .swal-wide .swal2-title {
     font-size: 1rem !important;

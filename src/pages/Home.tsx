@@ -98,7 +98,7 @@ export const Home = () => {
     <>
       <HomeHeader onHelpClick={() => setShowOnboarding(true)} />
 
-      <div className="min-h-screen w-full bg-gray-100 flex flex-col">
+      <div className="min-h-screen w-full bg-gray-100 dark:bg-neutral-900 flex flex-col transition-colors duration-300">
         <HomeActions
           loading={loading}
           onGenerate={handleGenerateVocabulary}
@@ -123,7 +123,7 @@ export const Home = () => {
           onPracticeInputChange={handlePracticeInputChange}
         />
 
-        <div className="flex flex-col gap-8 lg:flex-row lg:gap-8 mx-auto lg:mx-27 lg:my-20 mt-14">
+        <div className="flex flex-col gap-8 lg:flex-row lg:gap-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:my-20 mt-14 w-full">
           <SentencePracticeSection
             vocabulary={vocabulary}
             sentenceInput={sentenceInput}
@@ -139,7 +139,9 @@ export const Home = () => {
           <TranslatorSection />
         </div>
 
-        {showOnboarding && <OnboardingGuide onFinish={handleOnboardingFinish} />}
+        {showOnboarding && (
+          <OnboardingGuide onFinish={handleOnboardingFinish} />
+        )}
 
         <HomeFooter />
       </div>

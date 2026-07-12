@@ -75,7 +75,7 @@ export const AuthForm = () => {
 
   return (
     <div className="w-full max-w-6xl mx-auto p-4 sm:p-6 lg:p-8">
-      <div className="flex flex-col lg:flex-row bg-white shadow-xl border border-gray-200 rounded-xl overflow-hidden items-stretch lg:items-center">
+      <div className="flex flex-col lg:flex-row bg-white dark:bg-neutral-800 shadow-xl border border-gray-200 dark:border-neutral-700 rounded-xl overflow-hidden items-stretch lg:items-center transition-colors">
         {/* Gambar */}
         <div className="lg:flex-1 flex items-center justify-center md:mt-10 lg:mt-0 sm:p-0 md:p-2 lg:pl-10">
           <img
@@ -93,7 +93,7 @@ export const AuthForm = () => {
 
         {/* Form Login */}
         <div className="lg:flex-1 p-6 md:p-8 flex flex-col justify-center">
-          <h2 className="text-center text-2xl font-bold text-indigo-900 mb-8">
+          <h2 className="text-center text-2xl font-bold text-indigo-900 dark:text-indigo-300 mb-8 transition-colors">
             {isLogin ? "Sign in to your account" : "Buat akun baru"}
           </h2>
 
@@ -105,8 +105,8 @@ export const AuthForm = () => {
                   required
                   placeholder="Email address"
                   className={`w-full px-4 py-3 border ${
-                    errors.email ? "border-red-500" : "border-gray-300"
-                  } rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500`}
+                    errors.email ? "border-red-500" : "border-gray-300 dark:border-neutral-600"
+                  } rounded-lg bg-white dark:bg-neutral-700 text-neutral-900 dark:text-neutral-100 placeholder-gray-400 dark:placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors`}
                   value={email}
                   onChange={(e) => {
                     setEmail(e.target.value);
@@ -128,8 +128,8 @@ export const AuthForm = () => {
                   required
                   placeholder="Password"
                   className={`w-full px-4 py-3 border ${
-                    errors.password ? "border-red-500" : "border-gray-300"
-                  } rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500`}
+                    errors.password ? "border-red-500" : "border-gray-300 dark:border-neutral-600"
+                  } rounded-lg bg-white dark:bg-neutral-700 text-neutral-900 dark:text-neutral-100 placeholder-gray-400 dark:placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors`}
                   value={password}
                   onChange={(e) => {
                     setPassword(e.target.value);
@@ -147,7 +147,7 @@ export const AuthForm = () => {
             </div>
 
             {errors.general && (
-              <div className="p-3 bg-red-50 border border-red-200 text-red-600 rounded-lg text-sm text-center font-medium">
+              <div className="p-3 bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-900/50 text-red-600 dark:text-red-400 rounded-lg text-sm text-center font-medium transition-colors">
                 {errors.general}
               </div>
             )}
@@ -165,13 +165,13 @@ export const AuthForm = () => {
               <button
                 type="button"
                 onClick={() => navigate("/forgot-password")}
-                className="text-sm font-semibold text-indigo-600 hover:text-indigo-800 hover:underline"
+                className="text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 hover:underline transition-colors"
               >
                 Lupa password?
               </button>
             )}
             <button
-              className="text-gray-500 hover:text-indigo-700 text-sm font-medium transition"
+              className="text-gray-500 dark:text-neutral-400 hover:text-indigo-700 dark:hover:text-indigo-300 text-sm font-medium transition"
               onClick={() => {
                 setIsLogin(!isLogin);
                 setErrors({});

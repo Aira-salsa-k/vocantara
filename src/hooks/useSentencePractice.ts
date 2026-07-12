@@ -96,8 +96,8 @@ export const useSentencePractice = (user: any, vocabulary: Vocabulary[]) => {
 
     setGrammarLoading(false);
 
-    const saveSentencePractice = async () => {
-      if (!user || !user.uid) return false;
+    const saveSentencePractice = async (): Promise<{ success: boolean; error?: string }> => {
+      if (!user || !user.uid) return { success: false, error: "Anda belum login." };
 
       const dataToSave = {
         userId: user.uid,
@@ -110,19 +110,18 @@ export const useSentencePractice = (user: any, vocabulary: Vocabulary[]) => {
         createdAt: serverTimestamp(),
       };
 
-      // Removed console.log to fix data leak
       try {
         await addDoc(collection(db, "sentencePractices"), dataToSave);
-        return true;
-      } catch (err) {
+        return { success: true };
+      } catch (err: any) {
         console.error("Gagal menyimpan latihan kalimat ke Firestore:", err);
-        return false;
+        return { success: false, error: err.message || "Unknown error occurred" };
       }
     };
 
-    await saveSentencePractice();
+    const saveResult = await saveSentencePractice();
 
-    if (score === words.length && feedback === "Grammar looks good!") {
+    if (words.length > 0 && score === words.length && feedback === "Grammar looks good!") {
       if (!user) {
         Swal.fire({
           title: "Hore! Kalimatmu Sempurna! 🎉",
@@ -135,7 +134,7 @@ export const useSentencePractice = (user: any, vocabulary: Vocabulary[]) => {
           cancelButtonText: "Nanti Saja",
           customClass: {
             popup: "rounded-2xl shadow-2xl",
-            title: "text-2xl font-bold text-gray-800",
+            title: "text-2xl font-bold text-gray-800 dark:text-neutral-100",
           },
         }).then((result) => {
           if (result.isConfirmed) {
@@ -149,19 +148,28 @@ export const useSentencePractice = (user: any, vocabulary: Vocabulary[]) => {
           }
         });
       } else {
-        Swal.fire({
-          title: "Selamat!",
-          text: "Kalimat Anda sudah benar dan latihan telah disimpan.",
-          icon: "success",
-          timer: 1500,
-          showConfirmButton: false,
-        }).then(() => {
-          setSentenceInput("");
-          setSentenceScore(null);
-          setMatchedWords([]);
-          setGrammarSuggestion("");
-          setGrammarFeedback("");
-        });
+        if (saveResult.success) {
+          Swal.fire({
+            title: "Selamat!",
+            text: "Kalimat Anda sudah benar dan latihan telah disimpan.",
+            icon: "success",
+            timer: 1500,
+            showConfirmButton: false,
+          }).then(() => {
+            setSentenceInput("");
+            setSentenceScore(null);
+            setMatchedWords([]);
+            setGrammarSuggestion("");
+            setGrammarFeedback("");
+          });
+        } else {
+          Swal.fire({
+            title: "Gagal Menyimpan",
+            text: `Terjadi kesalahan sistem: ${saveResult.error}`,
+            icon: "error",
+            confirmButtonColor: "#2563eb",
+          });
+        }
       }
     }
   };

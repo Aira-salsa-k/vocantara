@@ -28,17 +28,22 @@ export const useProgress = (user: any) => {
 
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
       let allWords: string[] = [];
+      let oldScoreSum = 0;
+
       querySnapshot.forEach((doc) => {
         const data = doc.data();
-        if (Array.isArray(data.matchedWords)) {
+        if (Array.isArray(data.matchedWords) && data.matchedWords.length > 0) {
           allWords = allWords.concat(
             data.matchedWords.map((w: string) => w.toLowerCase())
           );
+        } else if (typeof data.score === "number") {
+          // Fallback: Untuk data lama yang belum menyimpan 'matchedWords', tambahkan skor lamanya agar tidak hilang
+          oldScoreSum += data.score;
         }
       });
 
       const uniqueWords = Array.from(new Set(allWords));
-      const wordCount = uniqueWords.length;
+      const wordCount = uniqueWords.length + oldScoreSum;
 
       setProgressWords(wordCount);
 

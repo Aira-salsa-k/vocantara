@@ -14,7 +14,7 @@ export const HomeActions: React.FC<HomeActionsProps> = ({
   onClear,
 }) => {
   return (
-    <section className="bg-white border-b border-gray-200 w-full">
+    <section className="bg-white dark:bg-neutral-900 border-b border-gray-200 dark:border-neutral-700 w-full transition-colors">
       <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 rounded-lg">
         <div className="flex flex-col sm:flex-row justify-center items-center gap-3">
           <button

@@ -88,11 +88,11 @@ const OnboardingGuide: React.FC<OnboardingGuideProps> = ({ onFinish }) => {
     // Backdrop
     <div className="fixed inset-0 bg-black/60 backdrop-blur-xs z-50 flex justify-center items-center p-5 sm:p-4">
       {/* Konten Modal */}
-      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg p-4 sm:p-6 relative animate-fade-in-up flex flex-col">
+      <div className="bg-white dark:bg-neutral-800 rounded-2xl shadow-2xl w-full max-w-lg p-4 sm:p-6 relative animate-fade-in-up flex flex-col transition-colors">
         {/* Tombol Tutup */}
         <button
           onClick={onFinish}
-          className="absolute top-4 right-4 text-gray-400 hover:text-gray-800 transition-colors p-1 rounded-full hover:bg-gray-100"
+          className="absolute top-4 right-4 text-gray-400 dark:text-neutral-400 hover:text-gray-800 dark:hover:text-neutral-200 transition-colors p-1 rounded-full hover:bg-gray-100 dark:hover:bg-neutral-700"
           aria-label="Tutup panduan"
         >
           <X size={24} />
@@ -105,15 +105,15 @@ const OnboardingGuide: React.FC<OnboardingGuideProps> = ({ onFinish }) => {
               key={index}
               className={`h-2 rounded-full transition-all duration-300 ${
                 index === currentStep
-                  ? "w-8 bg-indigo-600"
-                  : "w-2 bg-indigo-100"
+                  ? "w-8 bg-indigo-600 dark:bg-indigo-500"
+                  : "w-2 bg-indigo-100 dark:bg-neutral-600"
               }`}
             ></div>
           ))}
         </div>
 
         {/* Media (Gambar/GIF/Video) - Diubah menjadi persistent rendering agar smooth dan instan */}
-        <div className="mb-6 rounded-xl overflow-hidden bg-gray-50 flex items-center justify-center min-h-[200px] shadow-inner relative">
+        <div className="mb-6 rounded-xl overflow-hidden bg-gray-50 dark:bg-neutral-900 flex items-center justify-center min-h-[200px] shadow-inner relative transition-colors">
           {steps.map((step, index) => {
             if (!step.imageUrl) return null;
 
@@ -150,7 +150,7 @@ const OnboardingGuide: React.FC<OnboardingGuideProps> = ({ onFinish }) => {
             );
           })}
           {!steps[currentStep]?.imageUrl && (
-            <div className="text-gray-400 flex items-center justify-center">
+            <div className="text-gray-400 dark:text-neutral-500 flex items-center justify-center">
               No Media
             </div>
           )}
@@ -158,23 +158,23 @@ const OnboardingGuide: React.FC<OnboardingGuideProps> = ({ onFinish }) => {
 
         {/* Judul dan Konten */}
         <div className="flex-1 min-h-[120px] px-2">
-          <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-800 dark:text-neutral-100 mb-2">
             {currentStepData.title}
           </h2>
-          <p className="text-gray-600 leading-relaxed text-sm md:text-base whitespace-pre-line">
+          <p className="text-gray-600 dark:text-neutral-300 leading-relaxed text-sm md:text-base whitespace-pre-line">
             {currentStepData.content}
           </p>
         </div>
 
         {/* Navigasi */}
-        <div className="flex justify-between items-center mt-6 pt-4 border-t border-gray-100">
+        <div className="flex justify-between items-center mt-6 pt-4 border-t border-gray-100 dark:border-neutral-700">
           <button
             onClick={handlePrev}
             disabled={currentStep === 0}
             className={`font-semibold px-4 py-2 rounded-xl flex items-center gap-2 transition-all ${
               currentStep === 0
                 ? "text-transparent bg-transparent cursor-default select-none"
-                : "text-gray-600 hover:bg-gray-100 active:scale-95"
+                : "text-gray-600 dark:text-neutral-300 hover:bg-gray-100 dark:hover:bg-neutral-700 active:scale-95"
             }`}
           >
             {currentStep > 0 && (
@@ -188,12 +188,12 @@ const OnboardingGuide: React.FC<OnboardingGuideProps> = ({ onFinish }) => {
           <button
             onClick={handleNext}
             className="
-			bg-indigo-600 text-white font-semibold 
+			bg-indigo-600 dark:bg-indigo-500 text-white font-semibold 
 			px-4 py-2           // ukuran default (mobile)
 			sm:px-6 sm:py-2.5   // ukuran untuk layar >= 640px
 			rounded-xl 
 			flex items-center gap-1 sm:gap-2  // gap lebih kecil di mobile
-			hover:bg-indigo-700 
+			hover:bg-indigo-700 dark:hover:bg-indigo-600 
 			transition-all 
 			transform active:scale-95 
 		"

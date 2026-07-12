@@ -65,15 +65,15 @@ const TranslateIndoToEngSection = () => {
 	};
 
 	return (
-		<section className="p-4 bg-white rounded-xl shadow-md w-full mx-auto">
-			<h2 className="text-lg font-semibold mb-3 text-indigo-700">
+		<section className="p-4 bg-white dark:bg-neutral-800 rounded-xl shadow-md w-full mx-auto transition-colors">
+			<h2 className="text-lg font-semibold mb-3 text-indigo-700 dark:text-indigo-300">
 				Indonesia → Inggris
 			</h2>
 
 			<textarea
 				rows={3}
-				className="bg-gray-50 w-full border border-gray-300 rounded px-3 py-2 resize-y 
-        focus:outline-none focus:ring-2 focus:ring-indigo-200 text-sm placeholder-gray-300 placeholder:italic mb-2"
+				className="bg-gray-50 dark:bg-neutral-700/50 w-full border border-gray-300 dark:border-neutral-600 rounded px-3 py-2 text-gray-800 dark:text-neutral-100 resize-y 
+        focus:outline-none focus:ring-2 focus:ring-indigo-200 dark:focus:ring-indigo-500 text-sm placeholder-gray-400 dark:placeholder-neutral-500 placeholder:italic mb-2 transition-colors"
 				placeholder="Ketik kata/kalimat dalam bahasa Indonesia..."
 				value={input}
 				onChange={(e) => setInput(e.target.value)}
@@ -87,7 +87,7 @@ const TranslateIndoToEngSection = () => {
         ${
 					loading
 						? "bg-indigo-700 text-white opacity-90 cursor-not-allowed"
-						: "bg-gray-100 text-gray-400 hover:bg-indigo-700 hover:text-white active:bg-indigo-700 active:text-white"
+						: "bg-gray-100 dark:bg-neutral-700 text-gray-600 dark:text-neutral-300 hover:bg-indigo-700 hover:text-white dark:hover:bg-indigo-600 active:bg-indigo-700 active:text-white"
 				}`}
 			>
 				{loading ? (
@@ -101,8 +101,8 @@ const TranslateIndoToEngSection = () => {
 			</button>
 
 			{result && (
-				<div className="mt-3 p-2 bg-gray-50 rounded border border-gray-300 transition-all duration-300 ease-in-out">
-					<span className="font-medium text-gray-400">Hasil Translate:</span>
+				<div className="mt-3 p-2 bg-gray-50 dark:bg-neutral-700/50 rounded border border-gray-300 dark:border-neutral-600 text-gray-800 dark:text-neutral-100 transition-all duration-300 ease-in-out">
+					<span className="font-medium text-gray-500 dark:text-neutral-400">Hasil Translate:</span>
 					<br />
 					<span>{result}</span>
 				</div>

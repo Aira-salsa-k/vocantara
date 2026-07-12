@@ -25,20 +25,20 @@ export const SentencePracticeSection: React.FC<SentencePracticeSectionProps> = (
   onSubmit,
 }) => {
   return (
-    <section className="flex-1 lg:flex-[1.5] max-w-[600px] w-full mx-auto bg-white shadow rounded-xl p-6">
-      <h2 className="text-xl font-semibold mb-3 text-indigo-900">
+    <section className="flex-1 lg:flex-[1.5] max-w-[600px] w-full mx-auto bg-white dark:bg-neutral-800 shadow rounded-xl p-6 transition-colors">
+      <h2 className="text-xl font-semibold mb-3 text-indigo-900 dark:text-indigo-300">
         Latihan Merangkai Kalimat
       </h2>
-      <div className="mb-2 text-sm text-gray-700">
+      <div className="mb-2 text-sm text-gray-700 dark:text-neutral-300">
         Kata kunci yang harus ada di kalimat:
-        <span className="font-semibold text-indigo-600 ml-1">
+        <span className="font-semibold text-indigo-600 dark:text-indigo-400 ml-1">
           {vocabulary.map((v) => v.word).join(", ")}
         </span>
       </div>
       <form onSubmit={onSubmit} className="flex flex-col gap-3">
         <textarea
           rows={10}
-          className="bg-gray-100 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-200 [&:focus]:shadow-none resize-y placeholder-gray-400 placeholder:italic"
+          className="bg-gray-100 dark:bg-neutral-700/50 border border-gray-200 dark:border-neutral-600 rounded px-3 py-2 text-gray-800 dark:text-neutral-100 focus:outline-none focus:ring-2 focus:ring-indigo-200 dark:focus:ring-indigo-500 [&:focus]:shadow-none resize-y placeholder-gray-400 dark:placeholder-neutral-500 placeholder:italic transition-colors"
           placeholder="Buat kalimat yang mengandung semua kata di atas"
           value={sentenceInput}
           onChange={(e) => setSentenceInput(e.target.value)}
@@ -54,24 +54,24 @@ export const SentencePracticeSection: React.FC<SentencePracticeSectionProps> = (
       </form>
       {sentenceScore !== null && (
         <div className="mt-3 text-sm">
-          <span className="font-medium">
+          <span className="font-medium text-gray-800 dark:text-neutral-200">
             Score: {sentenceScore} / {vocabulary.length}
           </span>
           <br />
-          <span className="text-gray-700">
+          <span className="text-gray-700 dark:text-neutral-400">
             Kata yang ditemukan: {matchedWords.join(", ") || "-"}
           </span>
         </div>
       )}
 
       {grammarFeedback && (
-        <div className="mt-2 text-xs text-gray-700">
+        <div className="mt-2 text-xs text-gray-700 dark:text-neutral-300">
           Grammar: {grammarFeedback}
         </div>
       )}
 
       {grammarSuggestion && (
-        <div className="mt-1 text-xs text-blue-700">
+        <div className="mt-1 text-xs text-blue-700 dark:text-blue-300">
           Saran kalimat benar: <strong>{grammarSuggestion}</strong>
         </div>
       )}

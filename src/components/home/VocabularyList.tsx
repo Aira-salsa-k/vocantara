@@ -29,7 +29,7 @@ export const VocabularyList: React.FC<VocabularyListProps> = ({
     <main className="flex-grow py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {loading ? (
-          <div className="flex flex-col items-center justify-center min-h-[20vh] text-gray-600 gap-4">
+          <div className="flex flex-col items-center justify-center min-h-[20vh] text-gray-600 dark:text-neutral-300 gap-4">
             <div className="w-58 h-48">
               <DotLottieReact
                 src="https://lottie.host/39548f35-9573-42bb-8922-4febb7c5745c/cHTJuAco7l.lottie"
@@ -38,17 +38,16 @@ export const VocabularyList: React.FC<VocabularyListProps> = ({
               />
             </div>
             <p className="text-lg font-medium flex items-center gap-2">
-              <span>Generating vocabulary</span>
-              <span className="animate-pulse text-2xl">🤖</span>
+              <span>Generating vocabulary ...</span>
             </p>
           </div>
         ) : vocabulary.length === 0 ? (
-          <div className="flex flex-col items-center justify-center min-h-[24vh] gap-8 border-2 border-dashed border-gray-200 rounded-lg bg-gray-50 p-4 mx-4">
+          <div className="flex flex-col items-center justify-center min-h-[24vh] gap-8 border-2 border-dashed border-gray-200 dark:border-neutral-700 rounded-lg bg-gray-50 dark:bg-neutral-800 p-4 mx-4">
             <div className="text-center sm:mx-0 mx-8">
-              <h2 className="text-xl font-semibold text-gray-600 mb-2">
+              <h2 className="text-xl font-semibold text-gray-600 dark:text-neutral-300 mb-2">
                 Tidak ada vocabulary.
               </h2>
-              <p className="text-gray-500">
+              <p className="text-gray-500 dark:text-neutral-400">
                 klik "Generate Vocabulary" untuk mulai belajar !
               </p>
             </div>

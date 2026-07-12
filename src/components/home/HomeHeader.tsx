@@ -12,7 +12,7 @@ export const HomeHeader: React.FC<HomeHeaderProps> = ({ onHelpClick }) => {
       <UserAvatar />
       <button
         onClick={onHelpClick}
-        className="absolute top-4 right-4 z-40 bg-white p-2 rounded-full border border-gray-200 text-indigo-500 hover:text-indigo-600 hover:bg-indigo-50 transition-all hover:scale-105 active:scale-95"
+        className="absolute top-4 right-4 z-40 bg-white dark:bg-neutral-800 p-2 rounded-full border border-gray-200 dark:border-neutral-700 text-indigo-500 dark:text-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-300 hover:bg-indigo-50 dark:hover:bg-indigo-900/50 transition-all hover:scale-105 active:scale-95"
         aria-label="Bantuan Onboarding"
         title="Buka panduan"
       >

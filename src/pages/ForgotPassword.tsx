@@ -56,13 +56,13 @@ export const ForgotPassword = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
-      <div className="max-w-md w-full bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 p-8 text-center sm:text-left">
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-neutral-900 px-4 transition-colors">
+      <div className="max-w-md w-full bg-white dark:bg-neutral-800 rounded-2xl shadow-xl overflow-hidden border border-gray-100 dark:border-neutral-700 p-8 text-center sm:text-left transition-colors">
         <div className="mb-8">
-          <h2 className="text-2xl font-bold text-indigo-900 mb-2">
+          <h2 className="text-2xl font-bold text-indigo-900 dark:text-indigo-300 mb-2">
             Lupa Password?
           </h2>
-          <p className="text-gray-500 text-sm leading-relaxed">
+          <p className="text-gray-500 dark:text-neutral-400 text-sm leading-relaxed">
             Jangan khawatir! Masukkan alamat email yang tertaut dengan akun Anda
             dan kami akan mengirimkan instruksi untuk mereset password.
           </p>
@@ -70,15 +70,15 @@ export const ForgotPassword = () => {
 
         {success ? (
           <div className="flex flex-col items-center justify-center space-y-4 py-4 animate-fade-in-up">
-            <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-2">
+            <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full flex items-center justify-center mb-2">
               <MailCheck size={32} />
             </div>
-            <h3 className="text-xl font-semibold text-gray-800">
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-neutral-100">
               Email Terkirim!
             </h3>
-            <p className="text-sm text-gray-500 text-center mb-6">
+            <p className="text-sm text-gray-500 dark:text-neutral-400 text-center mb-6">
               Silakan periksa kotak masuk (atau folder spam) email{" "}
-              <strong className="text-gray-700">{email}</strong> untuk mengatur
+              <strong className="text-gray-700 dark:text-neutral-200">{email}</strong> untuk mengatur
               ulang password Anda.
             </p>
             <Link
@@ -93,7 +93,7 @@ export const ForgotPassword = () => {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700 mb-2"
+                className="block text-sm font-medium text-gray-700 dark:text-neutral-300 mb-2"
               >
                 Email Address
               </label>
@@ -103,8 +103,8 @@ export const ForgotPassword = () => {
                 className={`w-full px-4 py-3 border ${
                   error
                     ? "border-red-500 ring-1 ring-red-500"
-                    : "border-gray-300"
-                } rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-shadow`}
+                    : "border-gray-300 dark:border-neutral-600"
+                } rounded-lg bg-white dark:bg-neutral-700 text-neutral-900 dark:text-neutral-100 placeholder-gray-400 dark:placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all`}
                 placeholder="contoh@email.com"
                 value={email}
                 onChange={(e) => {
@@ -114,7 +114,7 @@ export const ForgotPassword = () => {
                 disabled={loading}
               />
               {error && (
-                <p className="mt-2 text-sm text-red-600 font-medium animate-fade-in-up">
+                <p className="mt-2 text-sm text-red-600 dark:text-red-400 font-medium animate-fade-in-up">
                   {error}
                 </p>
               )}
@@ -138,7 +138,7 @@ export const ForgotPassword = () => {
             <div className="text-center pt-2">
               <Link
                 to="/login"
-                className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-indigo-700 transition-colors"
+                className="inline-flex items-center text-sm font-medium text-gray-500 dark:text-neutral-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors"
               >
                 <ArrowLeft size={16} className="mr-2" />
                 Kembali ke halaman utama

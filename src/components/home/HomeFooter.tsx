@@ -2,7 +2,7 @@ import React from "react";
 
 export const HomeFooter: React.FC = () => {
   return (
-    <footer className="bg-white border-t border-gray-200 mt-10">
+    <footer className="bg-white dark:bg-neutral-800 border-t border-gray-200 dark:border-neutral-700 mt-10 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-4">
           <div className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-4 text-center md:text-left">
@@ -12,35 +12,35 @@ export const HomeFooter: React.FC = () => {
               className="w-12 h-12 sm:w-14 sm:h-14 object-contain flex-shrink-0"
             />
             <div>
-              <p className="text-xl font-bold text-indigo-600 mt-2 md:mt-0">
+              <p className="text-xl font-bold text-indigo-600 dark:text-indigo-400 mt-2 md:mt-0">
                 Vocantara
               </p>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-500 dark:text-neutral-400">
                 Built by{" "}
-                <span className="font-semibold text-gray-800">
+                <span className="font-semibold text-gray-800 dark:text-neutral-200">
                   Aira | Nadanta-dev
                 </span>
               </p>
             </div>
           </div>
 
-          <div className="flex flex-col items-center md:items-end gap-3 text-sm text-gray-600">
+          <div className="flex flex-col items-center md:items-end gap-3 text-sm text-gray-600 dark:text-neutral-300">
             <p>
               Support:{" "}
               <a
                 href="mailto:aira.kusumadew@gmail.com"
-                className="font-medium text-indigo-600 hover:underline"
+                className="font-medium text-indigo-600 dark:text-indigo-400 hover:underline"
               >
                 nadanta.techdev@gmail.com
               </a>
             </p>
-            <div className="flex items-center gap-1.5 text-gray-500">
+            <div className="flex items-center gap-1.5 text-gray-500 dark:text-neutral-400">
               <span className="text-xs">Images from</span>
               <a
                 href="https://www.freepik.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1 font-medium text-gray-600 hover:underline"
+                className="flex items-center gap-1 font-medium text-gray-600 dark:text-neutral-300 hover:underline"
               >
                 <img
                   src="FREEPIK_logo.png"
@@ -52,7 +52,7 @@ export const HomeFooter: React.FC = () => {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-gray-100 text-center text-sm text-gray-400">
+        <div className="mt-8 pt-8 border-t border-gray-100 dark:border-neutral-700 text-center text-sm text-gray-400 dark:text-neutral-500">
           <p>
             &copy; {new Date().getFullYear()} Vocantara. All rights reserved.
           </p>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { auth } from "../firebase"; // pastikan path sudah benar
 import { signOut } from "firebase/auth"; // jika pakai firebase auth
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function UserAvatar() {
 	const [showPopup, setShowPopup] = useState(false);
@@ -27,10 +28,10 @@ export default function UserAvatar() {
 								<img
 									src={auth.currentUser.photoURL}
 									alt="avatar"
-									className="w-8 h-8 rounded-full border"
+									className="w-8 h-8 rounded-full border dark:border-neutral-700"
 								/>
 							) : (
-								<div className="w-8 h-8 rounded-full bg-indigo-200 flex items-center justify-center text-indigo-700 font-bold ">
+								<div className="w-8 h-8 rounded-full bg-indigo-200 dark:bg-indigo-900/50 flex items-center justify-center text-indigo-700 dark:text-indigo-300 font-bold ">
 									{auth.currentUser.displayName
 										? auth.currentUser.displayName[0].toUpperCase()
 										: auth.currentUser.email
@@ -40,7 +41,7 @@ export default function UserAvatar() {
 							)}
 
 							{/* Nama hanya muncul di desktop */}
-							<span className="hidden sm:inline text-sm font-medium text-gray-700 " >
+							<span className="hidden sm:inline text-sm font-medium text-gray-700 dark:text-neutral-300" >
 								{auth.currentUser.displayName || auth.currentUser.email}
 							</span>
 						</button>
@@ -59,17 +60,17 @@ export default function UserAvatar() {
 									onClick={handleClose}
 								></div>
 
-								<div className="absolute  mt-2 left-0 bg-gray-50 shadow-lg rounded-lg border border-gray-300 p-4 pb-5 z-50 w-70 text-sm">
-									<div className="font-semibold text-gray-800 ">
+								<div className="absolute  mt-2 left-0 bg-gray-50 dark:bg-neutral-800 shadow-lg rounded-lg border border-gray-300 dark:border-neutral-700 p-4 pb-5 z-50 w-70 text-sm transition-colors">
+									<div className="font-semibold text-gray-800 dark:text-neutral-100">
 										{auth.currentUser.displayName || "User"}
 									</div>
-									<div className="text-gray-500 break-all text-sm">
+									<div className="text-gray-500 dark:text-neutral-400 break-all text-sm">
 										{auth.currentUser.email}
 									</div>
 									<div className="flex justify-start mt-4">
 										<button
 											onClick={handleSignOut}
-											className="flex items-center gap-2 text-white bg-gray-800 hover:bg-red-600 px-3 py-2 rounded-full text-xs sm:text-sm font-medium transition shadow-md hover:shadow-lg"
+											className="flex items-center gap-2 text-white bg-gray-800 dark:bg-neutral-700 hover:bg-red-600 dark:hover:bg-red-700 px-3 py-2 rounded-full text-xs sm:text-sm font-medium transition shadow-md hover:shadow-lg"
 										>
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +94,9 @@ export default function UserAvatar() {
 						)}
 					</div>
 				) : (
-					<div className="text-sm text-red-500 font-semibold">Belum Login</div>
+					<Link to="/login" className="text-sm text-red-500 font-semibold hover:underline">
+						Belum Login
+					</Link>
 				)}
 			</div>
 		</>
