@@ -13,7 +13,7 @@ export const translateWordService = async (word: string): Promise<string> => {
         headers: {
           "Content-Type": "application/json", 
           "x-rapidapi-host": "openl-translate.p.rapidapi.com",
-          "x-rapidapi-key":"e2d6554dcbmsh5b077ebc955fff8p1e078ejsn0da2f1368466"
+          "x-rapidapi-key": import.meta.env.VITE_RAPIDAPI_KEY || ""
         }
       }
     );
@@ -37,7 +37,7 @@ export const translateIndoToEngService = async (word: string): Promise<string> =
         headers: {
           "Content-Type": "application/json",
           "x-rapidapi-host": "openl-translate.p.rapidapi.com",
-          "x-rapidapi-key":"e2d6554dcbmsh5b077ebc955fff8p1e078ejsn0da2f1368466"
+          "x-rapidapi-key": import.meta.env.VITE_RAPIDAPI_KEY || ""
         }
       }
     );
